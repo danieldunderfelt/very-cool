@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../img/logo.svg'
+import logo from '../img/verycool_logo.png'
 
 const Header = class extends React.Component {
   componentDidMount() {
