@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-fonts",
       options: {
-        fonts: ["Barlow"]
+        fonts: ["Barlow:600,300", "Barlow+Semi+Condensed:300,300i,600,600i,900"]
       }
     },
     "gatsby-plugin-sass",

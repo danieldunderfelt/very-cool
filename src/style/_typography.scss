@@ -1,8 +1,11 @@
-@import "utils";
+@import 'utils';
 
 html {
   font-size: $fontSize;
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow Semi Condensed', 'Barlow', sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $darkGrey;
 }
 
 body {
@@ -10,5 +13,56 @@ body {
 
   @include big {
     font-size: 100%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Barlow', sans-serif;
+  line-height: 1.5;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1 {
+  font-size: rem(42px);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: rem(36px);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: rem(28px);
+  font-weight: 300;
+}
+
+h4 {
+  font-size: rem(24px);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: rem(20px);
+  font-weight: 600;
+}
+
+h6 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+}
+
+p {
+  text-align: justify;
+
+  &:first-child {
+    margin-top: 0;
   }
 }
