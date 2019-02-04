@@ -1,0 +1,12 @@
+@import 'variables';
+
+@mixin big {
+  @media screen and (min-width: 60rem) {
+    @content;
+  }
+}
+
+@function rem($px, $base: $fontSize) {
+  $remSize: $px / $base;
+  @return #{$remSize}rem;
+}

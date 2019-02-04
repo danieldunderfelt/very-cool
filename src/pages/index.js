@@ -1,46 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import get from "lodash/get"
+import get from 'lodash/get'
+import style from './FrontPage.module.scss'
+import Post from '../components/Post'
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    const posts = get(data, "allMarkdownRemark.edges", [])
-    
+    const posts = get(data, 'allMarkdownRemark.edges', [])
+
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
-              ))}
-          </div>
+        <section className={style.PostsList}>
+          {posts.map(({ node: post }) => (
+            <Post post={post} key={post.id} />
+          ))}
         </section>
       </Layout>
     )
@@ -58,8 +34,8 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "article" } }}
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { template: { eq: "article" } } }
     ) {
       edges {
         node {
@@ -70,7 +46,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            templateKey
+            template
             date(formatString: "MMMM DD, YYYY")
           }
         }

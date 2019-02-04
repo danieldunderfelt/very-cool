@@ -6,26 +6,36 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "articles"
-    label: "Articles"
-    folder: "src/pages/articles"
+  - name: 'articles'
+    label: 'Articles'
+    folder: 'src/pages/articles'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}/{{month}}/{{day}}/{{slug}}'
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "article"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {
+          label: 'Template Key',
+          name: 'template',
+          widget: 'hidden',
+          default: 'article',
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
 
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+      - file: 'src/pages/about/index.md'
+        label: 'About'
+        name: 'about'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: 'Template Key',
+              name: 'template',
+              widget: 'hidden',
+              default: 'page',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }

@@ -1,0 +1,14 @@
+@import "utils";
+
+html {
+  font-size: $fontSize;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  font-size: 87.5%;
+
+  @include big {
+    font-size: 100%;
+  }
+}
