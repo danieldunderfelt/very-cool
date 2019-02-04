@@ -30,7 +30,7 @@ export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
           </ul>
         </div>
       )}
-      <h1>{title}</h1>
+      <h1 className={styles.ArticleHeading}>{title}</h1>
       <div className={styles.PostMeta}>
         <Author name="Daniel Dunderfelt" />
         <TimeDisplay date={date} />
