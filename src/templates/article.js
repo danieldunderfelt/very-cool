@@ -12,7 +12,7 @@ import TimeDisplay from '../components/TimeDisplay'
 export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
   const PostContent = contentComponent || Content
   const {
-    frontmatter: { tags = [], date, title, description },
+    frontmatter: { tags = [], date, title },
     html,
   } = post
 
@@ -35,7 +35,6 @@ export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
         <Author name="Daniel Dunderfelt" />
         <TimeDisplay date={date} />
       </div>
-      <p>{description}</p>
       <PostContent content={html} />
     </section>
   )

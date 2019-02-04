@@ -23,6 +23,7 @@
 }
 
 .PostTags {
+  font-family: "Barlow Semi Condensed", sans-serif;
 
   ul {
     display: flex;
@@ -65,7 +66,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 .TimeDisplay {
@@ -75,10 +77,11 @@
   justify-content: flex-start;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: rem(14px);
+  font-size: rem(16px);
 
   svg {
     stroke: $blue;
+    fill: $blue;
     margin-right: 1rem;
     width: 20px;
     height: 20px;
@@ -90,7 +93,7 @@
   align-items: center;
   justify-content: flex-start;
   font-weight: 300;
-  font-size: rem(18px);
+  font-size: 1rem;
 
   img {
     display: block;
