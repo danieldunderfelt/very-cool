@@ -52,15 +52,16 @@ const TemplateWrapper = ({ children }) => (
             color="#ff4400"
           />
           <meta name="theme-color" content="#fff" />
-
           <meta property="og:type" content="business.business" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
-        <div className={styles.LayoutWrapper}>
-          <Header />
-          {children}
+        <div className={styles.Viewport}>
+          <div className={ styles.LayoutWrapper }>
+            <Header />
+            { children }
+          </div>
         </div>
       </>
     )}
