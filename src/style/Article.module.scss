@@ -7,7 +7,7 @@
 }
 
 .ArticlePage {
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   border-right: 1px solid $dividerColor;
   background: $articleBackground;
 }
@@ -61,6 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
 
 .TimeDisplay {

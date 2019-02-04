@@ -8,6 +8,7 @@ import Author from './Author'
 
 class Post extends Component {
   render() {
+    console.trace()
     const { post } = this.props
     const { frontmatter, fields, excerpt } = post
     const { tags = [], title, date } = frontmatter
