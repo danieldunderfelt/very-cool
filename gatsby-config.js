@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Very Cool - tech news and reviews',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Very Cool is a collection of cool stuff I find in the areas of technology, programming, science and entertainment. Enjoy!',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
