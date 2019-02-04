@@ -1,13 +1,94 @@
 @import 'utils';
 
-.ArticleWrapper {
-  padding: 2rem;
-  border-bottom: 1px solid $lightGrey;
-  background: #ffffff;
+.PostWrapper {
+  padding: 0 2rem 2rem;
+  border-bottom: 1px solid $dividerColor;
+  background: $articleBackground;
 }
 
 .ArticlePage {
   padding: 2rem;
-  border-right: 1px solid $lightGrey;
-  background: #ffffff;
+  border-right: 1px solid $dividerColor;
+  background: $articleBackground;
+}
+
+.PostLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.PostTags {
+
+  ul {
+    display: flex;
+    margin: 1.5rem 0 1rem;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    margin: 0;
+    color: $blue;
+    text-transform: uppercase;
+    font-size: rem(15px);
+
+    &:first-child {
+      font-weight: 900;
+    }
+
+    &:after {
+      content: "/";
+      font-weight: 300;
+      margin: 0 0.25rem;
+    }
+
+    &:last-child {
+
+      &:after {
+        content: "";
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+.PostMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TimeDisplay {
+  color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: rem(14px);
+
+  svg {
+    stroke: $blue;
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.AuthorDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 300;
+  font-size: rem(18px);
+
+  img {
+    display: block;
+    margin-right: 1rem;
+  }
 }

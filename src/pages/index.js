@@ -48,6 +48,7 @@ export const pageQuery = graphql`
             title
             template
             date(formatString: "MMMM DD, YYYY")
+            tags
           }
         }
       }

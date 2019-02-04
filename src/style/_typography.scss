@@ -3,13 +3,16 @@
 html {
   font-size: $fontSize;
   font-family: 'Barlow Semi Condensed', 'Barlow', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
-  color: $darkGrey;
+  color: $textColor;
 }
 
 body {
+  color: $textColor;
   font-size: 87.5%;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
 
   @include big {
     font-size: 100%;
@@ -22,7 +25,8 @@ h3,
 h4,
 h5 {
   font-family: 'Barlow', sans-serif;
-  line-height: 1.5;
+  color: $textColor;
+  line-height: 1.2;
 
   &:first-child {
     margin-top: 0;
@@ -35,7 +39,7 @@ h1 {
 }
 
 h2 {
-  font-size: rem(36px);
+  font-size: rem(42px);
   font-weight: 600;
 }
 
@@ -60,9 +64,14 @@ h6 {
 }
 
 p {
+  color: $textColor;
   text-align: justify;
 
   &:first-child {
     margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
