@@ -11,7 +11,7 @@ class Post extends Component {
     console.trace()
     const { post } = this.props
     const { frontmatter, fields, excerpt } = post
-    const { tags = [], title, date } = frontmatter
+    const { tags = [], title, date, author, cover_image } = frontmatter
 
     return (
       <div className={styles.PostWrapper}>
@@ -29,10 +29,11 @@ class Post extends Component {
         <Link className={commonStyles.HeadingLink} to={fields.slug}>
           <h2>{title}</h2>
           <div className={styles.PostMeta}>
-            <Author name="Daniel Dunderfelt" />
+            <Author name={author} />
             <TimeDisplay date={date} />
           </div>
           <p>{excerpt}</p>
+          <img src={cover_image} className={styles.CoverImage} />
         </Link>
       </div>
     )
