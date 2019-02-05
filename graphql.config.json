@@ -18,6 +18,7 @@
     }
   },
 
+
   "README_endpoints": "A list of GraphQL endpoints that can be queried from '.graphql' files in the IDE",
   "endpoints" : [
     {

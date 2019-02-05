@@ -5,10 +5,10 @@ import commonStyles from '../style/Common.module.scss'
 import { kebabCase } from 'lodash'
 import TimeDisplay from './TimeDisplay'
 import Author from './Author'
+import PostCoverImage from './PostCoverImage'
 
 class Post extends Component {
   render() {
-    console.trace()
     const { post } = this.props
     const { frontmatter, fields, excerpt } = post
     const { tags = [], title, date, author, cover_image } = frontmatter
@@ -33,7 +33,7 @@ class Post extends Component {
             <TimeDisplay date={date} />
           </div>
           <p>{excerpt}</p>
-          <img src={cover_image} className={styles.CoverImage} />
+          <PostCoverImage coverImage={cover_image} />
         </Link>
       </div>
     )

@@ -50,7 +50,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             tags
             author
-            cover_image
+            cover_image {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
           }
         }
       }

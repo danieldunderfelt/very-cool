@@ -8,11 +8,12 @@ import Content, { HTMLContent } from '../components/Content'
 import styles from '../style/Article.module.scss'
 import Author from '../components/Author'
 import TimeDisplay from '../components/TimeDisplay'
+import PostCoverImage from '../components/PostCoverImage'
 
 export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
   const PostContent = contentComponent || Content
   const {
-    frontmatter: { tags = [], date, title },
+    frontmatter: { tags = [], date, title, cover_image },
     html,
   } = post
 
@@ -35,6 +36,7 @@ export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
         <Author name="Daniel Dunderfelt" />
         <TimeDisplay date={date} />
       </div>
+      <PostCoverImage coverImage={cover_image} />
       <PostContent content={html} />
     </section>
   )
@@ -84,8 +86,15 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         tags
+        author
+        cover_image {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
       }
     }
   }

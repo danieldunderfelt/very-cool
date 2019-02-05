@@ -58,9 +58,9 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <div className={styles.Viewport}>
-          <div className={ styles.LayoutWrapper }>
+          <div className={styles.LayoutWrapper}>
             <Header />
-            { children }
+            <div className={styles.Page}>{children}</div>
           </div>
         </div>
       </>

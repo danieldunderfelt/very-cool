@@ -13,3 +13,9 @@
   display: grid;
   grid-template-columns: #{rem(400px)} #{rem(810px)};
 }
+
+.Page {
+  padding: 0 2rem 2rem;
+  border-right: 1px solid $dividerColor;
+  background: $articleBackground;
+}
