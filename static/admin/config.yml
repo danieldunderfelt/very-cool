@@ -1,9 +1,16 @@
 backend:
   name: git-gateway
   branch: master
+  accept_roles:
+    - admin
+    - editor
+
+publish_mode: editorial_workflow
 
 media_folder: static/img
 public_folder: /img
+
+logo_url: https://verycool.tech/static/img/verycool_log.png
 
 collections:
   - name: 'articles'
@@ -20,9 +27,15 @@ collections:
         }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text' }
+      - {
+          label: 'Cover image',
+          name: 'cover_image',
+          widget: 'image',
+          required: false,
+        }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Author', name: 'author', widget: 'string' }
 
   - name: 'pages'
     label: 'Pages'

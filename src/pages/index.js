@@ -49,6 +49,8 @@ export const pageQuery = graphql`
             template
             date(formatString: "MMMM DD, YYYY")
             tags
+            author
+            cover_image
           }
         }
       }

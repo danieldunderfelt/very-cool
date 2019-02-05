@@ -3,6 +3,8 @@ template: article
 title: This is the first post in the VERY COOL blog. Stay tuned!
 date: 2019-02-04T17:53:00.000Z
 description: A very cool blog is under construction.
+author: Daniel Dunderfelt
+cover_image: https://verycool.tech/static/img/og-image.png
 tags:
   - verycool
   - updates
