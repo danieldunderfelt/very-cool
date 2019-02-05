@@ -1,4 +1,10 @@
+@import 'utils';
+
 .HeadingLink {
   text-decoration: none;
   color: inherit;
+}
+
+.PageContent {
+  padding: 0 $margin $margin;
 }

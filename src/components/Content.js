@@ -1,12 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styles from '../style/Article.module.scss'
+import classnames from 'classnames'
 
 export const HTMLContent = ({ content, className }) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+  <div
+    className={classnames(className, styles.ArticleBody)}
+    dangerouslySetInnerHTML={{ __html: content }}
+  />
 )
 
 const Content = ({ content, className }) => (
-  <div className={className}>{content}</div>
+  <div className={classnames(className, styles.ArticleExcerpt)}>{content}</div>
 )
 
 Content.propTypes = {

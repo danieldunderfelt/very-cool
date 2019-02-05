@@ -6,9 +6,11 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import styles from '../style/Article.module.scss'
+import commonStyles from '../style/Common.module.scss'
 import Author from '../components/Author'
 import TimeDisplay from '../components/TimeDisplay'
 import PostCoverImage from '../components/PostCoverImage'
+import classnames from 'classnames'
 
 export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
   const PostContent = contentComponent || Content
@@ -18,7 +20,7 @@ export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
   } = post
 
   return (
-    <section className={styles.ArticlePage}>
+    <section className={classnames(commonStyles.PageContent, styles.ArticlePage)}>
       {helmet || ''}
       {tags && tags.length !== 0 && (
         <div className={styles.PostTags}>

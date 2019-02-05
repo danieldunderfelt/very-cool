@@ -6,6 +6,7 @@ import { kebabCase } from 'lodash'
 import TimeDisplay from './TimeDisplay'
 import Author from './Author'
 import PostCoverImage from './PostCoverImage'
+import { HTMLContent } from './Content'
 
 class Post extends Component {
   render() {
@@ -32,7 +33,7 @@ class Post extends Component {
             <Author name={author} />
             <TimeDisplay date={date} />
           </div>
-          <p>{excerpt}</p>
+          <HTMLContent content={excerpt} />
           <PostCoverImage coverImage={cover_image} />
         </Link>
       </div>

@@ -1,4 +1,4 @@
-@import "../style/utils";
+@import '../style/utils';
 
 .Viewport {
   max-width: 1920px;
@@ -15,7 +15,6 @@
 }
 
 .Page {
-  padding: 0 2rem 2rem;
   border-right: 1px solid $dividerColor;
   background: $articleBackground;
 }
