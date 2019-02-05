@@ -103,12 +103,6 @@
 }
 
 .ArticlePage {
-  .CoverImage {
-    display: block;
-    width: calc(100% + #{($margin * 2) + 1rem});
-    margin-left: -($margin + 0.5rem);
-    box-shadow: 5px 5px 30px 0 rgba(0, 5, 30, 0.25);
-  }
 }
 
 .ArticleBody {
