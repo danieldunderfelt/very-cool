@@ -35,7 +35,12 @@ collections:
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Tags', name: 'tags', widget: 'list' }
-      - { label: 'Author', name: 'author', widget: 'string' }
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'string',
+          default: 'Daniel Dunderfelt',
+        }
 
   - name: 'pages'
     label: 'Pages'
