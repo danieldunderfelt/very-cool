@@ -1,22 +1,25 @@
 @import 'utils';
 
 html {
-  font-size: $fontSize;
+  font-size: $smallFontSize;
   font-family: 'Barlow', sans-serif;
   font-weight: 400;
   line-height: 1.4;
   color: $textColor;
+
+  @include medium {
+    font-size: $smallFontSize;
+  }
+
+  @include big {
+    font-size: $fontSize;
+  }
 }
 
 body {
   color: $textColor;
-  font-size: 87.5%;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
-
-  @include big {
-    font-size: 100%;
-  }
 }
 
 h1,

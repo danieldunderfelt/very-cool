@@ -1,7 +1,13 @@
 @import 'variables';
 
+@mixin medium {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
 @mixin big {
-  @media screen and (min-width: 60rem) {
+  @media screen and (min-width: 1210px) {
     @content;
   }
 }

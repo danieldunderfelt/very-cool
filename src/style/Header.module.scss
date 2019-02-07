@@ -1,13 +1,24 @@
 @import 'utils';
 
 .Header {
-  padding-top: 1rem;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  position: relative;
+
+  @include big {
+    padding-top: 1rem;
+  }
 }
 
 .Logo {
-  width: rem(133px);
+  width: rem(110px);
   display: block;
+
+  @include big {
+    position: fixed;
+    left: rem(200px);
+    transform: translate(-50%, 0);
+    width: rem(133px);
+  }
 }

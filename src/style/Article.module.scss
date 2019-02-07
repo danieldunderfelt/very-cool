@@ -1,7 +1,6 @@
 @import 'utils';
 
 .PostWrapper {
-  border-bottom: 1px solid $dividerColor;
   background: $articleBackground;
   padding: $margin $margin 0;
   margin-top: $margin;
@@ -77,11 +76,20 @@
   text-transform: uppercase;
   font-size: rem(16px);
 
+  @include medium {
+    font-size: rem(18px);
+  }
+
   svg {
     fill: $blue;
     margin-right: 0.75rem;
-    width: 1rem;
-    height: 1rem;
+    width: 0.875rem;
+    height: 0.875rem;
+
+    @include medium {
+      width: 1rem;
+      height: 1rem;
+    }
   }
 }
 
@@ -90,13 +98,22 @@
   align-items: center;
   justify-content: flex-start;
   font-weight: 400;
-  font-size: rem(20px);
+  font-size: rem(18px);
+
+  @include medium {
+    font-size: rem(20px);
+  }
 
   img {
     display: block;
     margin-right: 1rem;
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    @include big {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
 
@@ -104,6 +121,7 @@
   display: block;
   width: calc(100% + #{$margin * 2});
   margin-left: -($margin);
+  margin-bottom: $margin;
 }
 
 .ArticlePage {

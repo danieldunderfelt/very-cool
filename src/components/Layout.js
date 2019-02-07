@@ -27,6 +27,7 @@ const TemplateWrapper = ({ children }) => (
             name="description"
             content={data.site.siteMetadata.description}
           />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           <link
             rel="apple-touch-icon"

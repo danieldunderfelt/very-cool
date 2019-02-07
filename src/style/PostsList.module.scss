@@ -1,12 +1,14 @@
 @import 'utils';
 
 .PostsList {
+  > *:first-child {
+    margin-top: $margin;
+  }
 }
 
 .ListHeading {
   font-weight: 400;
   color: $blueGrey;
-  margin-top: $margin;
 }
 
 .HeadingTag {
