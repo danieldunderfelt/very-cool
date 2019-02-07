@@ -7,6 +7,14 @@
 @import 'utils';
 @import 'typography';
 
+:root {
+  --veryLightGrey: #{$veryLightGrey};
+  --lightGrey: #{$lightGrey};
+  --darkGrey: #{$darkGrey};
+  --blueGrey: #{$blueGrey};
+  --blue: #{$blue};
+}
+
 html,
 body {
   margin: 0;

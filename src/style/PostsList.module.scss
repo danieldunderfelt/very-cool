@@ -1,0 +1,19 @@
+@import 'utils';
+
+.PostsList {
+}
+
+.ListHeading {
+  font-weight: 400;
+  color: $blueGrey;
+  margin-top: $margin;
+}
+
+.HeadingTag {
+  font-weight: 600;
+  background: lighten($blueGrey, 30%);
+  display: inline-block;
+  padding: 3px 10px 5px;
+  border-radius: 5px;
+  margin-left: 0.5rem;
+}

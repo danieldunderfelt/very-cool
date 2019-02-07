@@ -4,11 +4,16 @@
   border-bottom: 1px solid $dividerColor;
   background: $articleBackground;
   padding: $margin $margin 0;
-  margin-bottom: $margin / 2;
+  margin-top: $margin;
+  margin-bottom: $margin;
+  border-radius: 30px;
+  box-shadow: 10px 10px 50px 0 rgba(0, 10, 50, 0.05);
+  overflow: hidden;
+  border: 1px solid #efefef;
 }
 
 .ArticleHeading {
-  margin-top: 0;
+  margin: ($margin / 2) 0;
 }
 
 .PostLink {
@@ -22,7 +27,7 @@
 
   ul {
     display: flex;
-    margin: 0 0 0.5rem;
+    margin: 0 0 ($margin / 2);
     padding: 0;
   }
 
@@ -60,8 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: $margin 0 1rem;
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin: ($margin / 2) 0 1rem;
 }
 
 .TimeDisplay {
@@ -69,7 +73,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: rem(16px);
 
@@ -86,7 +90,7 @@
   align-items: center;
   justify-content: flex-start;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: rem(20px);
 
   img {
     display: block;
@@ -107,7 +111,7 @@
 }
 
 .ArticleBody {
-  margin: $margin 0;
+  margin: ($margin / 2) 0 $margin;
 }
 
 .ArticleExcerpt {

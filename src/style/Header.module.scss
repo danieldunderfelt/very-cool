@@ -1,8 +1,7 @@
-@import '../style/utils';
+@import 'utils';
 
 .Header {
   padding-top: 1rem;
-  border-right: 1px solid $dividerColor;
   display: flex;
   align-items: flex-start;
   justify-content: center;

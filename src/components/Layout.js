@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './Header'
 import '../style/index.scss'
-import styles from './Layout.module.scss'
+import styles from '../style/Layout.module.scss'
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -60,7 +60,7 @@ const TemplateWrapper = ({ children }) => (
         <div className={styles.Viewport}>
           <div className={styles.LayoutWrapper}>
             <Header />
-            <div className={styles.Page}>{children}</div>
+            {children}
           </div>
         </div>
       </>

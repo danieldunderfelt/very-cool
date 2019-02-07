@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import get from 'lodash/get'
-import style from './FrontPage.module.scss'
+import style from '../style/PostsList.module.scss'
 import Post from '../components/Post'
 
 export default class IndexPage extends React.Component {

@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import styles from '../style/Article.module.scss'
 import commonStyles from '../style/Common.module.scss'
+import layoutStyles from '../style/Layout.module.scss'
 import Author from '../components/Author'
 import TimeDisplay from '../components/TimeDisplay'
 import PostCoverImage from '../components/PostCoverImage'
@@ -20,27 +21,30 @@ export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
   } = post
 
   return (
-    <section className={classnames(commonStyles.PageContent, styles.ArticlePage)}>
-      {helmet || ''}
-      {tags && tags.length !== 0 && (
-        <div className={styles.PostTags}>
-          <ul>
-            {tags.map(tag => (
-              <li key={`tag_${tag}`}>
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              </li>
-            ))}
-          </ul>
+    <div className={layoutStyles.Page}>
+      <section
+        className={classnames(commonStyles.PageContent, styles.ArticlePage)}>
+        {helmet || ''}
+        {tags && tags.length !== 0 && (
+          <div className={styles.PostTags}>
+            <ul>
+              {tags.map(tag => (
+                <li key={`tag_${tag}`}>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <h1 className={styles.ArticleHeading}>{title}</h1>
+        <div className={styles.PostMeta}>
+          <Author name="Daniel Dunderfelt" />
+          <TimeDisplay date={date} />
         </div>
-      )}
-      <h1 className={styles.ArticleHeading}>{title}</h1>
-      <div className={styles.PostMeta}>
-        <Author name="Daniel Dunderfelt" />
-        <TimeDisplay date={date} />
-      </div>
-      <PostCoverImage coverImage={cover_image} />
-      <PostContent content={html} />
-    </section>
+        <PostCoverImage coverImage={cover_image} />
+        <PostContent content={html} />
+      </section>
+    </div>
   )
 }
 
