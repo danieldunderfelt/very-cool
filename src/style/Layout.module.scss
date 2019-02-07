@@ -3,7 +3,6 @@
 .Viewport {
   max-width: 1920px;
   width: 100%;
-  margin: 0 auto;
 }
 
 .LayoutWrapper {
@@ -16,7 +15,8 @@
   @include big {
     padding: 0;
     display: grid;
-    grid-template-columns: #{rem(400px)} #{rem(760px)};
+    max-width: 960px;
+    grid-template-columns: #{rem(200px)} #{rem(760px)};
   }
 }
 

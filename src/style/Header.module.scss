@@ -5,10 +5,6 @@
   align-items: flex-start;
   justify-content: center;
   position: relative;
-
-  @include big {
-    padding-top: 1rem;
-  }
 }
 
 .Logo {
@@ -17,6 +13,7 @@
 
   @include big {
     position: fixed;
+    top: 1rem;
     left: rem(200px);
     transform: translate(-50%, 0);
     width: rem(133px);
