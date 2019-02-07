@@ -10,7 +10,7 @@ publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
 
-logo_url: https://verycool.tech/static/img/verycool_log.png
+logo_url: https://verycool.tech/static/img/verycool_logo.png
 
 collections:
   - name: 'articles'
