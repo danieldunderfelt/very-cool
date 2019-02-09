@@ -15,6 +15,9 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-catch-links',
+    `gatsby-plugin-twitter`,
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
@@ -74,6 +77,12 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.5rem`,
+            },
+          },
         ],
       },
     },
@@ -82,6 +91,15 @@ module.exports = {
       options: {
         include: /icons/,
         svgo: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#4b72ff`,
+        // Disable the loading spinner.
+        showSpinner: false,
       },
     },
     {

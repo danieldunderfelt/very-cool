@@ -4,12 +4,10 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import styles from '../style/Article.module.scss'
-import commonStyles from '../style/Common.module.scss'
 import layoutStyles from '../style/Layout.module.scss'
 import Author from '../components/Author'
 import TimeDisplay from '../components/TimeDisplay'
 import PostMediaImage from '../components/PostMediaImage'
-import classnames from 'classnames'
 import PostTags from '../components/PostTags'
 import get from 'lodash/get'
 import SEO from '../components/SEO'
@@ -23,8 +21,7 @@ export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
 
   return (
     <div className={layoutStyles.Page}>
-      <section
-        className={classnames(commonStyles.PageContent, styles.ArticlePage)}>
+      <section className={styles.ArticlePage}>
         {helmet || ''}
         <PostTags tags={tags} />
         <h1 className={styles.ArticleHeading}>{title}</h1>
