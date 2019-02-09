@@ -5535,6 +5535,13 @@ gatsby-plugin-svgr@^2.0.1:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-svgr/-/gatsby-plugin-svgr-2.0.1.tgz#4ff2d4247b7ce5bdad3a3e81ea993968f993d42e"
   integrity sha512-iNhS3e8TrWkrPY5EgrWpKoxh13DEcP3f8DrVGQ0mz8qafCHxcxjLUKaCUO6WZlgxsANIhm3dMXiABvqAebApzw==
 
+gatsby-plugin-twitter@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.0.9.tgz#d8ef73aa44fda89337d99eb30040d141a93dc027"
+  integrity sha512-wXdg9WWFoxoqq6QNraNuv5rjrb7YTsQljN+D8qLI44KhsXmpI+rwYZ/Mlyh1OIaQoEN0Bnb+/BeSfo3McZ9tjg==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-react-router-scroll@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.0.4.tgz#d13d8b2a6c076338f17e331c52075d78b059e9bc"

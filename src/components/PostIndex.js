@@ -51,6 +51,10 @@ export const postIndexQuery = graphql`
         author
         media_image {
           childImageSharp {
+            fixed {
+              width
+              height
+            }
             fluid {
               src
               aspectRatio

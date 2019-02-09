@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -12,11 +11,13 @@ import TimeDisplay from '../components/TimeDisplay'
 import PostMediaImage from '../components/PostMediaImage'
 import classnames from 'classnames'
 import PostTags from '../components/PostTags'
+import get from 'lodash/get'
+import SEO from '../components/SEO'
 
 export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
   const PostContent = contentComponent || Content
   const {
-    frontmatter: { tags = [], date, title, media_image },
+    frontmatter: { tags = [], date, title, media_image, author },
     html,
   } = post
 
@@ -28,7 +29,7 @@ export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
         <PostTags tags={tags} />
         <h1 className={styles.ArticleHeading}>{title}</h1>
         <div className={styles.PostMeta}>
-          <Author name="Daniel Dunderfelt" />
+          <Author name={author} />
           <TimeDisplay date={date} />
         </div>
         <PostMediaImage mediaImage={media_image} />
@@ -45,22 +46,45 @@ ArticleTemplate.propTypes = {
 }
 
 const Article = ({ data }) => {
-  const { markdownRemark: post } = data
+  const {
+    markdownRemark: post,
+    site: { siteMetadata: metaData },
+  } = data
+  const {
+    fields,
+    excerpt,
+    longExcerpt,
+    frontmatter: { title, author, tags, media_image, normalDate },
+  } = post
+
+  const page = {
+    titleAlt: 'verycool.tech article: ' + title,
+    url: metaData.siteUrl + get(fields, 'slug', ''),
+    title: title,
+    image: metaData.siteLogo,
+    main: false,
+    description: excerpt,
+    keywords: tags,
+  }
+
+  const article = {
+    title: title,
+    url: metaData.siteUrl + get(fields, 'slug', ''),
+    imgUrl: get(media_image, 'childImageSharp.fluid.src', ''),
+    imgWidth: get(media_image, 'childImageSharp.fixed.width', ''),
+    imgHeight: get(media_image, 'childImageSharp.fixed.height', ''),
+    date: normalDate,
+    tags: tags,
+    description: longExcerpt,
+    authorName: author,
+  }
 
   return (
     <Layout>
       <ArticleTemplate
         post={post}
         contentComponent={HTMLContent}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
+        helmet={<SEO page={page} article={article} />}
       />
     </Layout>
   )
@@ -76,16 +100,34 @@ export default Article
 
 export const pageQuery = graphql`
   query ArticleByID($id: String!) {
+    site {
+      siteMetadata {
+        siteUrlShort
+        siteUrl
+        siteTitle
+        siteLogo
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
+      excerpt(pruneLength: 256)
+      longExcerpt: excerpt(pruneLength: 400)
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        normalDate: date(formatString: "YYYY-MM-DDTHH:mm:ssZZ")
         title
         tags
         author
         media_image {
           childImageSharp {
+            fixed {
+              width
+              height
+            }
             fluid {
               src
               aspectRatio

@@ -51,7 +51,7 @@
 }
 
 .ArticleHeading {
-  margin: ($margin / 1.5) 0 $margin;
+  margin: ($margin / 1.5) 0 1rem;
 }
 
 .PostLink {
@@ -146,9 +146,6 @@
   align-items: center;
   justify-content: space-between;
   margin: ($margin / 2) (-$margin) 1rem;
-  background: rgba(0, 0, 0, 0.025);
-  border-top: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
   padding: 0.5rem $margin;
   font-size: rem(16px);
 
@@ -197,10 +194,15 @@
 
 .ArticlePage {
   padding-top: 0;
+
+  .PostMeta {
+    background: transparent;
+    border: 0;
+  }
 }
 
 .ArticleBody {
-  margin: $margin 0;
+  margin: ($margin / 2) 0 $margin;
 }
 
 .ArticleExcerpt {

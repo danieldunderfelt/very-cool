@@ -1,8 +1,17 @@
+const seoConfig = require('./seoConfig')
+
 module.exports = {
   siteMetadata: {
-    title: 'Very Cool - tech news and reviews',
-    description:
-      'Very Cool is a collection of cool stuff I find in the areas of technology, programming, science and entertainment. Enjoy!',
+    siteUrl: seoConfig.siteUrl,
+    siteUrlShort: seoConfig.siteUrlShort,
+    siteTitle: seoConfig.siteTitle,
+    siteTitleAlt: seoConfig.siteTitleAlt,
+    siteDescription: seoConfig.siteDescription,
+    siteLogo: seoConfig.siteLogo,
+    siteKeyWords: seoConfig.siteKeyWords,
+    favicon: seoConfig.favicon,
+    title: seoConfig.siteTitle,
+    description: seoConfig.siteDescription,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
