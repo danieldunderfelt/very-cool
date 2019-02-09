@@ -6,8 +6,14 @@
   margin-top: $margin;
   margin-bottom: $margin;
   border-radius: 30px;
-  box-shadow: 8px 10px 50px 0 rgba(0, 10, 50, 0.075);
+  box-shadow: 5px 5px 20px 0 rgba(0, 10, 50, 0.05);
   overflow: hidden;
+  transition: transform 0.2s ease-out, box-shadow 0.125s ease-out;
+
+  &:hover {
+    transform: scale(1.015);
+    box-shadow: 10px 10px 50px 0 rgba(0, 10, 50, 0.15);
+  }
 
   .MediaImage {
     margin-bottom: 0;
@@ -22,6 +28,11 @@
   padding: ($margin - 0.25rem) $margin 0.25rem;
   overflow: hidden;
   border-radius: 30px;
+  transition: transform 0.2s ease-out;
+
+  &:hover {
+    transform: scale(1.015);
+  }
 
   .MediaImage {
     margin-top: $margin / 1.5;
@@ -29,7 +40,7 @@
   }
 
   .ArticleBody {
-    margin: ($margin / 2) 0;
+    margin: ($margin / 2) 0 ($margin / 1.5);
   }
 }
 

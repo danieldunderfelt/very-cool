@@ -6,7 +6,6 @@ import PostMediaImage from './PostMediaImage'
 import { HTMLContent } from './Content'
 import PostTags from './PostTags'
 import classnames from 'classnames'
-import { graphql } from 'gatsby'
 
 class Message extends Component {
   render() {
