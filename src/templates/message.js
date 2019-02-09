@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import MessageItem from '../components/Message'
 import get from 'lodash/get'
 import SEO from '../components/SEO'
-import Helmet from './article'
+import Helmet from 'react-helmet'
 import config from '../../seoConfig'
 
 export const MessageTemplate = ({ helmet, post }) => {
