@@ -4,16 +4,15 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import postsListStyle from '../../style/PostList.module.scss'
+import config from '../../../seoConfig'
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => (
   <Layout>
+    <Helmet title={`Tags | ${config.siteTitle}`} />
     <div>
       <h3 className={postsListStyle.ListHeading}>Tags</h3>
       <ul className={postsListStyle.TagList}>
@@ -38,11 +37,6 @@ export default TagsPage
 
 export const tagPageQuery = graphql`
   query TagsQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(limit: 1000) {
       group(field: frontmatter___tags) {
         fieldValue

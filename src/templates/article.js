@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import styles from '../style/Article.module.scss'
@@ -11,6 +12,7 @@ import PostMediaImage from '../components/PostMediaImage'
 import PostTags from '../components/PostTags'
 import get from 'lodash/get'
 import SEO from '../components/SEO'
+import config from '../../seoConfig'
 
 export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
   const PostContent = contentComponent || Content
@@ -43,33 +45,17 @@ ArticleTemplate.propTypes = {
 }
 
 const Article = ({ data }) => {
-  const {
-    markdownRemark: post,
-    site: { siteMetadata: metaData },
-  } = data
+  const { markdownRemark: post } = data
   const {
     fields,
-    excerpt,
     longExcerpt,
     frontmatter: { title, author, tags, media_image, normalDate },
   } = post
 
-  const page = {
-    titleAlt: 'verycool.tech article: ' + title,
-    url: metaData.siteUrl + get(fields, 'slug', ''),
-    title: title,
-    image: metaData.siteLogo,
-    main: false,
-    description: excerpt,
-    keywords: tags,
-  }
-
   const article = {
     title: title,
-    url: metaData.siteUrl + get(fields, 'slug', ''),
+    slug: get(fields, 'slug', ''),
     imgUrl: get(media_image, 'childImageSharp.fluid.src', ''),
-    imgWidth: get(media_image, 'childImageSharp.fixed.width', ''),
-    imgHeight: get(media_image, 'childImageSharp.fixed.height', ''),
     date: normalDate,
     tags: tags,
     description: longExcerpt,
@@ -81,7 +67,14 @@ const Article = ({ data }) => {
       <ArticleTemplate
         post={post}
         contentComponent={HTMLContent}
-        helmet={<SEO page={page} article={article} />}
+        helmet={
+          <>
+            <Helmet>
+              <title>{`${title} | ${config.siteTitle}`}</title>
+            </Helmet>
+            <SEO post={article} postSEO={true} />
+          </>
+        }
       />
     </Layout>
   )
@@ -97,14 +90,6 @@ export default Article
 
 export const pageQuery = graphql`
   query ArticleByID($id: String!) {
-    site {
-      siteMetadata {
-        siteUrlShort
-        siteUrl
-        siteTitle
-        siteLogo
-      }
-    }
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 256)

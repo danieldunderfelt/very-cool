@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 import get from 'lodash/get'
 import PostIndex from '../components/PostIndex'
+import SEO from '../components/SEO'
+import config from '../../seoConfig'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -12,6 +15,8 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+        <Helmet title={config.siteTitle} />
+        <SEO />
         <PostIndex posts={posts} />
       </Layout>
     )

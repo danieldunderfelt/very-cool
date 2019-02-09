@@ -6,7 +6,6 @@ import PostMediaImage from './PostMediaImage'
 import { HTMLContent } from './Content'
 import PostTags from './PostTags'
 import classnames from 'classnames'
-import commonStyles from '../style/Common.module.scss'
 import { Link } from 'gatsby'
 
 class Message extends Component {
@@ -15,7 +14,7 @@ class Message extends Component {
     const { frontmatter, fields, html } = post
     const { tags = [], date, author, media_image } = frontmatter
 
-    const ContentWrapper = isLink ? Link : 'div'
+    const LinkComponent = isLink ? Link : 'div'
 
     return (
       <div
@@ -24,18 +23,18 @@ class Message extends Component {
           !isLink ? articleStyles.NoEffectMessage : ''
         )}>
         <PostTags tags={tags} />
-        <ContentWrapper className={commonStyles.HeadingLink} to={fields.slug}>
-          <HTMLContent content={html} />
-          {media_image && <PostMediaImage mediaImage={media_image} />}
-          <div
-            className={classnames(
-              articleStyles.PostMeta,
-              articleStyles.MessageMeta
-            )}>
-            <Author name={author} />
+        <HTMLContent content={html} />
+        {media_image && <PostMediaImage mediaImage={media_image} />}
+        <div
+          className={classnames(
+            articleStyles.PostMeta,
+            articleStyles.MessageMeta
+          )}>
+          <Author name={author} />
+          <LinkComponent to={fields.slug}>
             <TimeDisplay date={date} />
-          </div>
-        </ContentWrapper>
+          </LinkComponent>
+        </div>
       </div>
     )
   }

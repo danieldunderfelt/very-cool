@@ -100,7 +100,7 @@
 }
 
 .TimeDisplay {
-  color: $blueGrey;
+  color: $grey;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -112,7 +112,7 @@
     height: 0.875rem;
 
     path {
-      fill: $blueGrey;
+      fill: $grey;
     }
 
     @include medium {

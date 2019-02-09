@@ -13,7 +13,7 @@ class PostMediaImage extends Component {
 
     return (
       <picture className={styles.MediaImage}>
-        <source {...fluid} />
+        <source srcSet={fluid.srcSet} sizes={fluid.sizes} />
         <img alt="Web Development" src={fluid.src} />
       </picture>
     )

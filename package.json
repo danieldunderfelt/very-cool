@@ -37,6 +37,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
+    "url-join": "^4.0.0",
     "uuid": "^3.2.1"
   },
   "keywords": [
@@ -50,6 +51,7 @@
     "build": "yarn run clean && gatsby build",
     "develop": "yarn run clean && gatsby develop",
     "serve": "gatsby serve",
+    "production": "yarn run build && yarn run serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

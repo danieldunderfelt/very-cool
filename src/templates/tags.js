@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import postsListStyle from '../style/PostList.module.scss'
 import get from 'lodash/get'
 import PostIndex from '../components/PostIndex'
+import config from '../../seoConfig'
 
 class TagRoute extends React.Component {
   render() {
@@ -12,11 +13,12 @@ class TagRoute extends React.Component {
     const posts = get(data, 'allMarkdownRemark.edges', [])
 
     const tag = this.props.pageContext.tag
-    const title = this.props.data.site.siteMetadata.title
 
     return (
       <Layout>
-        <Helmet title={`${tag} | ${title}`} />
+        <Helmet>
+          <title>{`Tagged with ${tag} | ${config.siteTitle}`}</title>
+        </Helmet>
         <div>
           <h3 className={postsListStyle.ListHeading}>
             Posts with tag{' '}
@@ -33,11 +35,6 @@ export default TagRoute
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }

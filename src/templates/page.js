@@ -7,12 +7,15 @@ import classnames from 'classnames'
 import commonStyles from '../style/Common.module.scss'
 import layoutStyles from '../style/Layout.module.scss'
 import articleStyles from '../style/Article.module.scss'
+import Helmet from 'react-helmet'
+import config from '../../seoConfig'
 
 export const PageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
     <div className={layoutStyles.Page}>
+      <Helmet title={`${title} | ${config.siteTitle}`} />
       <section className={classnames(commonStyles.PageContent)}>
         <h1 className={articleStyles.ArticleHeading}>{title}</h1>
         <PageContent content={content} />
