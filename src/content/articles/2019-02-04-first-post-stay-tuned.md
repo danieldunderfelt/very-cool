@@ -2,7 +2,7 @@
 template: article
 title: This is the first post in the VERY COOL blog. Stay tuned!
 date: 2019-02-04T17:53:00.000Z
-cover_image: /img/og-image.png
+media_image: /img/og-image.png
 tags:
   - verycool
   - updates

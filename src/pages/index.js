@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import get from 'lodash/get'
-import style from '../style/PostsList.module.scss'
-import Post from '../components/Post'
+import PostIndex from '../components/PostIndex'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -13,11 +12,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <section className={style.PostsList}>
-          {posts.map(({ node: post }) => (
-            <Post post={post} key={post.id} />
-          ))}
-        </section>
+        <PostIndex posts={posts} />
       </Layout>
     )
   }
@@ -35,30 +30,10 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { template: { eq: "article" } } }
+      filter: { frontmatter: { template: { in: ["article", "message"] } } }
     ) {
       edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            template
-            date(formatString: "MMMM DD, YYYY")
-            tags
-            author
-            cover_image {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
-            }
-          }
-        }
+        ...PostIndexFragment
       }
     }
   }

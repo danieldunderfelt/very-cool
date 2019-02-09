@@ -1,40 +1,30 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import styles from '../style/Article.module.scss'
+import articleStyles from '../style/Article.module.scss'
 import commonStyles from '../style/Common.module.scss'
-import { kebabCase } from 'lodash'
 import TimeDisplay from './TimeDisplay'
 import Author from './Author'
-import PostCoverImage from './PostCoverImage'
+import PostMediaImage from './PostMediaImage'
 import { HTMLContent } from './Content'
+import PostTags from './PostTags'
 
 class Post extends Component {
   render() {
     const { post } = this.props
     const { frontmatter, fields, excerpt } = post
-    const { tags = [], title, date, author, cover_image } = frontmatter
+    const { tags = [], title, date, author, media_image } = frontmatter
 
     return (
-      <div className={styles.PostWrapper}>
-        {tags && tags.length !== 0 && (
-          <div className={styles.PostTags}>
-            <ul>
-              {tags.map(tag => (
-                <li key={`tag_${tag}`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+      <div className={articleStyles.Post}>
+        <PostTags tags={tags} />
         <Link className={commonStyles.HeadingLink} to={fields.slug}>
-          <h2>{title}</h2>
-          <div className={styles.PostMeta}>
+          <h2 className={articleStyles.ArticleHeading}>{title}</h2>
+          <div className={articleStyles.PostMeta}>
             <Author name={author} />
             <TimeDisplay date={date} />
           </div>
           <HTMLContent content={excerpt} />
-          <PostCoverImage coverImage={cover_image} />
+          <PostMediaImage mediaImage={media_image} />
         </Link>
       </div>
     )

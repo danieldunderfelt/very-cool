@@ -8,15 +8,22 @@
 .LayoutWrapper {
   width: 100%;
   min-height: 100vh;
-  max-width: $width;
   padding: 1rem;
   margin: 0 auto;
 
-  @include big {
+  @include multiColumn {
     padding: 0;
     display: grid;
-    max-width: 960px;
-    grid-template-columns: #{rem(200px)} #{rem(760px)};
+    width: calc(960px - 2rem);
+    grid-template-columns: 1.5fr 3.6fr;
+  }
+
+  @include big {
+    width: 100%;
+    max-width: $width;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1.75fr 3.6fr;
   }
 }
 

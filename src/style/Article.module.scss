@@ -1,22 +1,40 @@
 @import 'utils';
 
-.PostWrapper {
+.Post {
   background: $articleBackground;
-  padding: $margin $margin 0;
+  padding: ($margin - 0.5rem) $margin 0;
   margin-top: $margin;
   margin-bottom: $margin;
   border-radius: 30px;
-  box-shadow: 10px 10px 50px 0 rgba(0, 10, 50, 0.05);
+  box-shadow: 8px 10px 50px 0 rgba(0, 10, 50, 0.075);
   overflow: hidden;
-  border: 1px solid #efefef;
 
-  .CoverImage {
+  .MediaImage {
     margin-bottom: 0;
   }
 }
 
+.Message {
+  background: transparent;
+  margin-top: $margin;
+  margin-bottom: $margin;
+  border: 1px solid #dedede;
+  padding: ($margin - 0.25rem) $margin 0.25rem;
+  overflow: hidden;
+  border-radius: 30px;
+
+  .MediaImage {
+    margin-top: $margin / 1.5;
+    margin-bottom: 0;
+  }
+
+  .ArticleBody {
+    margin: ($margin / 2) 0;
+  }
+}
+
 .ArticleHeading {
-  margin: ($margin / 2) 0;
+  margin: ($margin / 1.5) 0 $margin;
 }
 
 .PostLink {
@@ -64,31 +82,21 @@
   }
 }
 
-.PostMeta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: ($margin / 2) 0 1rem;
-}
-
 .TimeDisplay {
-  color: $blue;
+  color: $blueGrey;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   font-weight: 400;
-  text-transform: uppercase;
-  font-size: rem(16px);
-
-  @include medium {
-    font-size: rem(18px);
-  }
 
   svg {
-    fill: $blue;
     margin-right: 0.75rem;
     width: 0.875rem;
     height: 0.875rem;
+
+    path {
+      fill: $blueGrey;
+    }
 
     @include medium {
       width: 1rem;
@@ -102,30 +110,72 @@
   align-items: center;
   justify-content: flex-start;
   font-weight: 400;
-  font-size: rem(18px);
-
-  @include medium {
-    font-size: rem(20px);
-  }
 
   img {
     display: block;
     margin-right: 1rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
 
     @include big {
-      width: 2rem;
-      height: 2rem;
+      width: 1.75rem;
+      height: 1.75rem;
     }
   }
 }
 
-.CoverImage {
+.PostMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: ($margin / 2) (-$margin) 1rem;
+  background: rgba(0, 0, 0, 0.025);
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding: 0.5rem $margin;
+  font-size: rem(16px);
+
+  @include medium {
+    font-size: rem(18px);
+  }
+}
+
+.MessageMeta {
+  border-top: 1px solid #dedede;
+  border-bottom: 0;
+  margin-bottom: 0;
+  font-size: rem(14px);
+  margin-top: 0;
+  background: transparent;
+
+  .TimeDisplay {
+    svg {
+      margin-right: 0.5rem;
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
+
+  .AuthorDisplay {
+    img {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.MediaImage {
   display: block;
-  width: calc(100% + #{$margin * 2});
-  margin-left: -($margin);
-  margin-bottom: $margin;
+  min-width: 100%;
+  margin: 0 (-$margin) $margin;
+  background-size: cover;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .ArticlePage {

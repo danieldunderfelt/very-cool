@@ -31,10 +31,6 @@ h5 {
   color: $textColor;
   line-height: 1.2;
   margin-bottom: 1rem;
-
-  &:first-child {
-    margin-top: 0;
-  }
 }
 
 h1 {
@@ -78,4 +74,25 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+em {
+  font-weight: 500;
+}
+
+button,
+a {
+  font-family: inherit;
+  color: inherit;
+  outline: 0;
+  text-decoration: none;
+  transition: transform 0.1s ease-out;
+
+  &:hover {
+    transform: scale(1.015);
+  }
+}
+
+p a {
+  color: $blue;
 }

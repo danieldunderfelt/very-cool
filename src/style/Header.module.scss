@@ -5,17 +5,45 @@
   align-items: flex-start;
   justify-content: center;
   position: relative;
+  margin-bottom: -0.5rem;
+
+  @include multiColumn {
+    justify-content: flex-start;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    margin-left: $margin;
+    position: relative;
+  }
 }
 
 .Logo {
-  width: rem(110px);
+  width: rem(120px);
   display: block;
 
-  @include big {
+  @include multiColumn {
+    width: rem(200px);
+    margin-bottom: $margin;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.HeaderContent {
+  max-width: 100%;
+
+  @include multiColumn {
     position: fixed;
-    top: 1rem;
-    left: rem(200px);
-    transform: translate(-50%, 0);
-    width: rem(133px);
+    max-width: rem(210px);
+  }
+}
+
+.mobileHide {
+  display: none;
+
+  @include multiColumn {
+    display: block;
   }
 }

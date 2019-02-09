@@ -3,33 +3,34 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import postsListStyle from '../../style/PostList.module.scss'
 
 const TagsPage = ({
-  data: { allMarkdownRemark: { group }, site: { siteMetadata: { title } } },
+  data: {
+    allMarkdownRemark: { group },
+    site: {
+      siteMetadata: { title },
+    },
+  },
 }) => (
   <Layout>
-    <section className="section">
-      <Helmet title={`Tags | ${title}`} />
-      <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="taglist">
-              {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div>
+      <h3 className={postsListStyle.ListHeading}>Tags</h3>
+      <ul className={postsListStyle.TagList}>
+        {group.map(tag => (
+          <li key={tag.fieldValue}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              <strong className={postsListStyle.TagListTag}>
+                {tag.fieldValue}
+              </strong>
+              <span className={postsListStyle.TagListCount}>
+                {tag.totalCount}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   </Layout>
 )
 

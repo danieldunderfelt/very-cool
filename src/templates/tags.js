@@ -2,9 +2,9 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import postsListStyle from '../style/PostsList.module.scss'
-import Post from '../components/Post'
+import postsListStyle from '../style/PostList.module.scss'
 import get from 'lodash/get'
+import PostIndex from '../components/PostIndex'
 
 class TagRoute extends React.Component {
   render() {
@@ -17,15 +17,13 @@ class TagRoute extends React.Component {
     return (
       <Layout>
         <Helmet title={`${tag} | ${title}`} />
-        <section className={postsListStyle.PostsList}>
+        <div>
           <h3 className={postsListStyle.ListHeading}>
             Posts with tag{' '}
             <strong className={postsListStyle.HeadingTag}>{tag}</strong>
           </h3>
-          {posts.map(({ node: post }) => (
-            <Post post={post} key={post.id} />
-          ))}
-        </section>
+          <PostIndex posts={posts} />
+        </div>
       </Layout>
     )
   }
@@ -44,31 +42,14 @@ export const tagPageQuery = graphql`
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        frontmatter: { tags: { in: [$tag] }, template: { eq: "article" } }
+        frontmatter: {
+          tags: { in: [$tag] }
+          template: { in: ["article", "message"] }
+        }
       }
     ) {
       edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            template
-            date(formatString: "MMMM DD, YYYY")
-            tags
-            author
-            cover_image {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
-            }
-          }
-        }
+        ...PostIndexFragment
       }
     }
   }

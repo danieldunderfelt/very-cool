@@ -6,6 +6,12 @@
   }
 }
 
+@mixin multiColumn {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
 @mixin big {
   @media screen and (min-width: 1210px) {
     @content;

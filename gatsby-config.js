@@ -10,7 +10,7 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'Barlow:300,300i,400,600,600i,900',
+          'Barlow:300,300i,400,400i,600,600i,900',
           'barlow+Semi+Condensed:300,400,500,900',
         ],
       },
@@ -27,8 +27,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/src/content`,
+        name: 'content',
       },
     },
     {
