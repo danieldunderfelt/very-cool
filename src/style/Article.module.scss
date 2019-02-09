@@ -31,7 +31,7 @@
   transition: transform 0.2s ease-out;
 
   &:hover {
-    transform: scale(1.015);
+    transform: scale(1.005);
   }
 
   .MediaImage {
@@ -41,6 +41,12 @@
 
   .ArticleBody {
     margin: ($margin / 2) 0 ($margin / 1.5);
+  }
+}
+
+.NoEffectMessage {
+  &:hover {
+    transform: none;
   }
 }
 
@@ -194,7 +200,7 @@
 }
 
 .ArticleBody {
-  margin: ($margin / 2) 0 $margin;
+  margin: $margin 0;
 }
 
 .ArticleExcerpt {
