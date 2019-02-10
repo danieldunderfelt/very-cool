@@ -5,28 +5,42 @@ import Message from './Message'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
 
+const ARTICLE_TEMPLATE = 'article'
+const MESSAGE_TEMPLATE = 'message'
+
 class PostIndex extends React.Component {
   render() {
     const { posts, highlightFirst = false } = this.props
-    let articlesIndex = -1
+    let didHighlight = []
 
     return (
       <section className={style.PostsList}>
-        {posts.map(({ node: post }, index) => {
-          const template = get(post, 'frontmatter.template', 'article')
+        {posts.map(({ node: post }) => {
+          const template = get(post, 'frontmatter.template', ARTICLE_TEMPLATE)
+          const pinned = get(post, 'frontmatter.pinned', false)
+          let shouldHighlight = false
 
-          if (template === 'article') {
-            articlesIndex++
+          if (!didHighlight.includes(template)) {
+            if (template === ARTICLE_TEMPLATE && highlightFirst) {
+              shouldHighlight = true
+              didHighlight.push(template)
+            } else if (
+              (!highlightFirst || template === MESSAGE_TEMPLATE) &&
+              pinned
+            ) {
+              shouldHighlight = true
+              didHighlight.push(template)
+            }
           }
 
           let ListItem
 
           switch (template) {
-            case 'message':
+            case MESSAGE_TEMPLATE:
               ListItem = Message
               break
             default:
-            case 'article':
+            case ARTICLE_TEMPLATE:
               ListItem = Post
               break
           }
@@ -36,10 +50,7 @@ class PostIndex extends React.Component {
               post={post}
               key={post.id}
               isListing={true}
-              highlight={
-                highlightFirst &&
-                ((template === 'message' && index === 0) || articlesIndex === 0)
-              }
+              highlight={shouldHighlight}
             />
           )
         })}

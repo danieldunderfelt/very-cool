@@ -127,11 +127,12 @@
 
     @include multiColumn {
       position: fixed;
+      z-index: 100;
       width: 100vw;
       margin: 0;
       top: 0;
       left: 0;
-      padding: 0.5rem $margin * 2 0.5rem $margin;
+      padding: 0.5rem $margin * 2 0.75rem $margin;
     }
 
     @media screen and (min-width: 1500px) {
@@ -143,6 +144,7 @@
     }
 
     .PostTags {
+      margin-top: 0.1em;
       margin-right: $margin;
       color: white;
       margin-bottom: 0.5rem;

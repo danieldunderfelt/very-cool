@@ -43,7 +43,7 @@ collections:
         widget: 'string',
         default: 'Daniel Dunderfelt',
       }
-      - { label: 'Pinned', name: 'pinned', widget: 'boolean', default: false, required: false }
+      - { label: 'Pinned', name: 'pinned', widget: 'number', valueType: "int", default: 0, required: false }
   - name: 'message'
     label: 'Message'
     folder: 'src/content/messages'
@@ -73,7 +73,7 @@ collections:
         widget: 'string',
         default: 'Daniel Dunderfelt',
       }
-      - { label: 'Pinned', name: 'pinned', widget: 'boolean', default: false, required: false }
+      - { label: 'Pinned', name: 'pinned', widget: 'number', valueType: "int", default: 0, required: false }
 
   - name: 'page'
     label: 'Page'
