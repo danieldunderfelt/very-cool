@@ -20,7 +20,8 @@
   }
 
   &.HighlightedPost {
-    border: 0.5px solid rgba($blue, 0.5);
+    box-shadow: 5px 10px 30px 0 rgba(50, 5, 30, 0.075);
+    margin-bottom: $margin * 2;
 
     @include multiColumn {
       margin-left: -$margin * 1;
@@ -42,9 +43,10 @@
       margin-right: -$margin * 2;
     }
 
-    @media screen and (min-width: #{$bigWidth + 160px}) {
-      margin-left: -$margin * 2;
-      margin-right: -$margin * 4;
+    .ArticleHeading {
+      @include multiColumn {
+        font-size: rem(48px);
+      }
     }
   }
 }
@@ -115,6 +117,7 @@
 .ArticleHeading {
   margin: ($margin / 1.5) 0 1rem;
   color: inherit;
+  font-size: rem(42px);
 }
 
 .PostLink {
