@@ -1,6 +1,15 @@
 @import 'utils';
 
 .PostsList {
+  margin-top: $margin * 1.25;
+
+  > * {
+    margin: $margin 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 .ListHeading {

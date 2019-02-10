@@ -10,7 +10,7 @@ import { Link } from 'gatsby'
 
 class Message extends Component {
   render() {
-    const { post, isLink = true } = this.props
+    const { post, isLink = true, isListing = false } = this.props
     const { frontmatter, fields, html } = post
     const { tags = [], date, author, media_image } = frontmatter
 
@@ -20,7 +20,8 @@ class Message extends Component {
       <div
         className={classnames(
           articleStyles.Message,
-          !isLink ? articleStyles.NoEffectMessage : ''
+          !isLink ? articleStyles.NoEffectMessage : '',
+          isListing ? articleStyles.InPostListing : ''
         )}>
         <Author name={author} />
         <HTMLContent content={html} />

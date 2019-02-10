@@ -25,7 +25,7 @@ class PostIndex extends React.Component {
               break
           }
 
-          return <ListItem post={post} key={post.id} />
+          return <ListItem post={post} key={post.id} isListing={true} />
         })}
       </section>
     )
