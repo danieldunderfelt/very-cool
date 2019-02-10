@@ -20,6 +20,10 @@
   width: rem(120px);
   display: block;
 
+  h1 {
+    display: inline;
+  }
+
   @include multiColumn {
     width: rem(200px);
     margin-bottom: $margin;

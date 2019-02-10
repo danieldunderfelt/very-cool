@@ -9,7 +9,9 @@ const Header = class extends React.Component {
       <nav className={styles.Header}>
         <div className={styles.HeaderContent}>
           <Link to="/" title="Logo" className={styles.Logo}>
-            <img src={logo} alt="Very Cool" />
+            <h1>
+              <img src={logo} alt="Very Cool" />
+            </h1>
           </Link>
           <div className={styles.mobileHide}>
             <p>
