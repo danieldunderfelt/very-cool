@@ -8,11 +8,17 @@ import { graphql } from 'gatsby'
 class PostIndex extends React.Component {
   render() {
     const { posts, highlightFirst = false } = this.props
+    let articlesIndex = -1
 
     return (
       <section className={style.PostsList}>
         {posts.map(({ node: post }, index) => {
           const template = get(post, 'frontmatter.template', 'article')
+
+          if (template === 'article') {
+            articlesIndex++
+          }
+
           let ListItem
 
           switch (template) {
@@ -30,7 +36,10 @@ class PostIndex extends React.Component {
               post={post}
               key={post.id}
               isListing={true}
-              highlight={index === 0 && highlightFirst}
+              highlight={
+                highlightFirst &&
+                ((template === 'message' && index === 0) || articlesIndex === 0)
+              }
             />
           )
         })}
