@@ -22,7 +22,7 @@ class Message extends Component {
           articleStyles.Message,
           !isLink ? articleStyles.NoEffectMessage : ''
         )}>
-        <PostTags tags={tags} />
+        <Author name={author} />
         <HTMLContent content={html} />
         {media_image && <PostMediaImage mediaImage={media_image} />}
         <div
@@ -30,7 +30,7 @@ class Message extends Component {
             articleStyles.PostMeta,
             articleStyles.MessageMeta
           )}>
-          <Author name={author} />
+          <PostTags tags={tags} />
           <LinkComponent to={fields.slug}>
             <TimeDisplay date={date} />
           </LinkComponent>
