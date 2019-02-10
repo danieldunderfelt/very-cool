@@ -40,9 +40,10 @@
   @include multiColumn {
     width: 100%;
     margin-left: 0;
-    border-radius: 30px;
     border: 0;
-    box-shadow: 5px 10px 30px 0 rgba(0, 10, 50, 0.1);
+    box-shadow: -1px 1px 6px 0 rgba(0, 10, 50, 0.075);
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
