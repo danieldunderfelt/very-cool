@@ -106,6 +106,73 @@
       margin-left: auto;
     }
   }
+
+  &.HighlightedMessage {
+    margin: 0 -1rem $margin;
+    max-width: none;
+    background: $blue;
+    color: white;
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+    align-items: flex-start;
+    font-size: 0.875rem;
+    transform: none;
+    transition: none;
+
+    @include medium {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include multiColumn {
+      position: fixed;
+      width: 100vw;
+      margin: 0;
+      top: 0;
+      left: 0;
+      padding: 0.5rem $margin * 2 0.5rem $margin;
+    }
+
+    @media screen and (min-width: 1500px) {
+      max-width: 1490px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .PostTags {
+      margin-right: $margin;
+      color: white;
+      margin-bottom: 0.5rem;
+
+      @include medium {
+        margin-bottom: 0;
+      }
+
+      ul {
+        margin-bottom: 0;
+      }
+    }
+
+    .AuthorDisplay,
+    .MediaImage,
+    .PostMeta {
+      display: none;
+    }
+
+    .ArticleBody {
+      margin: 0;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    a {
+      color: inherit;
+    }
+  }
 }
 
 .NoEffectMessage {
@@ -266,6 +333,10 @@
 
 .ArticleBody {
   margin: ($margin / 2) 0 $margin;
+
+  p {
+    color: inherit;
+  }
 }
 
 .ArticleExcerpt {

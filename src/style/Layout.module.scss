@@ -25,6 +25,14 @@
     display: grid;
     grid-template-columns: 1.75fr 3.6fr;
   }
+
+  &.TopSpace {
+    margin-top: 0;
+
+    @include multiColumn {
+      margin-top: $margin * 1.5;
+    }
+  }
 }
 
 .Page {

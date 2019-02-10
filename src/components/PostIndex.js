@@ -26,17 +26,12 @@ class PostIndex extends React.Component {
           }
 
           return (
-            <>
-              <ListItem
-                post={post}
-                key={post.id}
-                isListing={true}
-                highlight={index === 0 && highlightFirst}
-              />
-              {highlightFirst && index === 0 && (
-                <div className={style.Divider} />
-              )}
-            </>
+            <ListItem
+              post={post}
+              key={post.id}
+              isListing={true}
+              highlight={index === 0 && highlightFirst}
+            />
           )
         })}
       </section>
@@ -61,6 +56,7 @@ export const postIndexQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         tags
         author
+        pinned
         media_image {
           childImageSharp {
             fixed {

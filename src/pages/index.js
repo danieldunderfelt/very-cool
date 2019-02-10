@@ -13,8 +13,16 @@ export default class IndexPage extends React.Component {
     const { data } = this.props
     const posts = get(data, 'allMarkdownRemark.edges', [])
 
+    const hasPinnedMessage = posts.some(
+      ({
+        node: { frontmatter: { template = 'article', pinned = false } = {} },
+      }) => template === 'message' && pinned
+    )
+
+    console.log(hasPinnedMessage)
+
     return (
-      <Layout>
+      <Layout topSpace={hasPinnedMessage}>
         <Helmet title={config.siteTitle} />
         <SEO />
         <PostIndex posts={posts} highlightFirst={true} />

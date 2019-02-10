@@ -10,7 +10,12 @@ import { Link } from 'gatsby'
 
 class Message extends Component {
   render() {
-    const { post, isLink = true, isListing = false } = this.props
+    const {
+      post,
+      isLink = true,
+      isListing = false,
+      highlight = false,
+    } = this.props
     const { frontmatter, fields, html } = post
     const { tags = [], date, author, media_image } = frontmatter
 
@@ -21,8 +26,10 @@ class Message extends Component {
         className={classnames(
           articleStyles.Message,
           !isLink ? articleStyles.NoEffectMessage : '',
-          isListing ? articleStyles.InPostListing : ''
+          isListing ? articleStyles.InPostListing : '',
+          highlight ? articleStyles.HighlightedMessage : ''
         )}>
+        {highlight && <PostTags tags={tags} />}
         <Author name={author} />
         <HTMLContent content={html} />
         {media_image && <PostMediaImage mediaImage={media_image} />}
@@ -31,7 +38,7 @@ class Message extends Component {
             articleStyles.PostMeta,
             articleStyles.MessageMeta
           )}>
-          <PostTags tags={tags} />
+          {!highlight && <PostTags tags={tags} />}
           <LinkComponent to={fields.slug}>
             <TimeDisplay date={date} />
           </LinkComponent>

@@ -1,12 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
+import classnames from 'classnames'
 import Header from './Header'
 import '../style/index.scss'
 import styles from '../style/Layout.module.scss'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, topSpace = false }) => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -59,7 +59,11 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <div className={styles.Viewport}>
-          <div className={styles.LayoutWrapper}>
+          <div
+            className={classnames(
+              styles.LayoutWrapper,
+              topSpace ? styles.TopSpace : ''
+            )}>
             <Header />
             {children}
           </div>

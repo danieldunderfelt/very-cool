@@ -1,10 +1,14 @@
 @import 'utils';
 
 .PostsList {
-  margin-top: $margin * 1.25;
+  margin-top: $margin / 2;
+
+  @include medium {
+    margin-top: $margin * 1.25;
+  }
 
   > * {
-    margin: $margin 0;
+    margin: 0 0 $margin;
 
     &:first-child {
       margin-top: 0;
@@ -16,10 +20,6 @@
   font-weight: 400;
   color: $blueGrey;
   margin-top: $margin * 1.25;
-}
-
-.Divider {
-  // Placeholder
 }
 
 .HeadingTag {
