@@ -7,15 +7,20 @@ import Author from './Author'
 import PostMediaImage from './PostMediaImage'
 import { HTMLContent } from './Content'
 import PostTags from './PostTags'
+import classnames from 'classnames'
 
 class Post extends Component {
   render() {
-    const { post } = this.props
+    const { post, highlight = false } = this.props
     const { frontmatter, fields, excerpt } = post
     const { tags = [], title, date, author, media_image } = frontmatter
 
     return (
-      <div className={articleStyles.Post}>
+      <div
+        className={classnames(
+          articleStyles.Post,
+          highlight ? articleStyles.HighlightedPost : ''
+        )}>
         <PostTags tags={tags} />
         <Link className={commonStyles.HeadingLink} to={fields.slug}>
           <h2 className={articleStyles.ArticleHeading}>{title}</h2>

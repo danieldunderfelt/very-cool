@@ -20,7 +20,7 @@
 
   @include big {
     width: 100%;
-    max-width: $width;
+    max-width: $containerMaxWidth;
     padding: 0;
     display: grid;
     grid-template-columns: 1.75fr 3.6fr;

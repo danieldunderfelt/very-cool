@@ -1,19 +1,19 @@
 @import 'variables';
 
 @mixin medium {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: #{$mediumWidth}) {
     @content;
   }
 }
 
 @mixin multiColumn {
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: #{$multiColumnWidth}) {
     @content;
   }
 }
 
 @mixin big {
-  @media screen and (min-width: 1210px) {
+  @media screen and (min-width: #{$bigWidth}) {
     @content;
   }
 }

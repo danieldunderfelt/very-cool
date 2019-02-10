@@ -13,21 +13,19 @@ const Header = class extends React.Component {
               <img src={logo} alt="Very Cool" />
             </h1>
           </Link>
-          <div className={styles.mobileHide}>
-            <p>
-              This is is a collection of <em>very cool</em> things we've found
-              in our modern world of technological progress. Enjoy!
-            </p>
-            <p>
-              Created by{' '}
-              <a
-                title="DanielDunderfelt.com"
-                href="https://danieldunderfelt.com">
-                Daniel Dunderfelt
-              </a>
-              .
-            </p>
-          </div>
+        </div>
+        <div className={styles.HeaderContentBottom}>
+          <p>
+            Created by{' '}
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              title="danieldunderfelt.com"
+              href="https://danieldunderfelt.com">
+              Daniel Dunderfelt
+            </a>
+            .
+          </p>
         </div>
       </nav>
     )

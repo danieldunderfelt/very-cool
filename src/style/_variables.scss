@@ -1,11 +1,15 @@
 // Sizes
-$width: 1160px;
-$largeWidth: 1210px;
+$containerMaxWidth: 1160px;
 $fontSize: 20px;
 $mediumFontSize: 18px;
 $smallFontSize: 16px;
 $fontSizeSmall: 16px;
 $margin: 1.5rem;
+
+// Breakpoints
+$mediumWidth: 768px;
+$multiColumnWidth: 960px;
+$bigWidth: 1210px;
 
 // Colors
 $veryLightGrey: #ededed;

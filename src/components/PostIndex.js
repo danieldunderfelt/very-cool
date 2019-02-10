@@ -7,11 +7,11 @@ import { graphql } from 'gatsby'
 
 class PostIndex extends React.Component {
   render() {
-    const { posts } = this.props
+    const { posts, highlightFirst = false } = this.props
 
     return (
       <section className={style.PostsList}>
-        {posts.map(({ node: post }) => {
+        {posts.map(({ node: post }, index) => {
           const template = get(post, 'frontmatter.template', 'article')
           let ListItem
 
@@ -25,7 +25,19 @@ class PostIndex extends React.Component {
               break
           }
 
-          return <ListItem post={post} key={post.id} isListing={true} />
+          return (
+            <>
+              <ListItem
+                post={post}
+                key={post.id}
+                isListing={true}
+                highlight={index === 0 && highlightFirst}
+              />
+              {highlightFirst && index === 0 && (
+                <div className={style.Divider} />
+              )}
+            </>
+          )
         })}
       </section>
     )

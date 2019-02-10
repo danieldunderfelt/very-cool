@@ -44,10 +44,24 @@
   }
 }
 
-.mobileHide {
+.HeaderContentBottom {
   display: none;
 
   @include multiColumn {
     display: block;
+    position: fixed;
+    left: $margin;
+    bottom: $margin;
+    font-size: 0.875rem;
+    color: $grey;
+  }
+
+  p {
+    text-align: left;
+    color: inherit;
+  }
+
+  a {
+    color: $blueGrey;
   }
 }

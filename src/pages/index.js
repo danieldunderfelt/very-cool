@@ -17,7 +17,7 @@ export default class IndexPage extends React.Component {
       <Layout>
         <Helmet title={config.siteTitle} />
         <SEO />
-        <PostIndex posts={posts} />
+        <PostIndex posts={posts} highlightFirst={true} />
       </Layout>
     )
   }
@@ -34,7 +34,10 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: {
+        order: [ASC, DESC]
+        fields: [frontmatter___pinned, frontmatter___date]
+      }
       filter: { frontmatter: { template: { in: ["article", "message"] } } }
     ) {
       edges {
