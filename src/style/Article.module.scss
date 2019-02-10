@@ -118,6 +118,7 @@
     font-size: 0.875rem;
     transform: none;
     transition: none;
+    border: 0;
 
     @include medium {
       display: flex;
