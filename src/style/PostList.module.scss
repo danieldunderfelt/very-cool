@@ -1,7 +1,7 @@
 @import 'utils';
 
 .PostsList {
-  margin-top: $margin / 2;
+  margin-top: $margin;
 
   @include medium {
     margin-top: $margin * 1.25;

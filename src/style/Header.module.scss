@@ -17,7 +17,7 @@
 }
 
 .Logo {
-  width: rem(120px);
+  width: rem(106.4px);
   display: block;
 
   h1 {
@@ -25,7 +25,7 @@
   }
 
   @include multiColumn {
-    width: rem(200px);
+    width: rem(177.333px);
     margin-bottom: $margin;
   }
 

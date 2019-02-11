@@ -24,7 +24,6 @@ const Header = class extends React.Component {
               href="https://danieldunderfelt.com">
               Daniel Dunderfelt
             </a>
-            .
           </p>
         </div>
       </nav>

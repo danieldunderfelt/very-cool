@@ -3,42 +3,29 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
-import get from 'lodash/get'
-import partition from 'lodash/partition'
 import PostIndex from '../components/PostIndex'
 import SEO from '../components/SEO'
 import config from '../../seoConfig'
+import { hasPinnedMessage, hasPinnedArticle } from '../util/hasPinnedMessage'
+import { get } from 'lodash'
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     let posts = get(data, 'allMarkdownRemark.edges', [])
 
-    const hasPinnedMessage = posts.some(
-      ({ node: { frontmatter: { template = 'article', pinned = 0 } = {} } }) =>
-        template === 'message' && pinned
-    )
-
-    const hasPinnedArticle = posts.some(
-      ({ node: { frontmatter: { template = 'article', pinned = 0 } = {} } }) =>
-        template === 'article' && pinned
-    )
-
-    if (hasPinnedArticle) {
-      posts = partition(posts, 'node.frontmatter.pinned').reduce(
-        (sortedPosts, postGroup) => {
-          sortedPosts = sortedPosts.concat(postGroup)
-          return sortedPosts
-        },
-        []
-      )
-    }
+    const messagePinned = hasPinnedMessage(posts)
+    const articlePinned = hasPinnedArticle(posts)
 
     return (
-      <Layout topSpace={hasPinnedMessage}>
+      <Layout topSpace={messagePinned}>
         <Helmet title={config.siteTitle} />
         <SEO />
-        <PostIndex posts={posts} highlightFirst={!hasPinnedArticle} />
+        <PostIndex
+          posts={posts}
+          highlightFirst={!articlePinned}
+          highlightPinned={true}
+        />
       </Layout>
     )
   }

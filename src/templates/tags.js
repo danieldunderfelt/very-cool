@@ -11,7 +11,6 @@ class TagRoute extends React.Component {
   render() {
     const { data } = this.props
     const posts = get(data, 'allMarkdownRemark.edges', [])
-
     const tag = this.props.pageContext.tag
 
     return (
