@@ -57,22 +57,6 @@ const TemplateWrapper = ({ children, topSpace = false }) => (
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
-
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(f, a, t, h, o, m){
-  a[ h ] = a[ h ] || function() {
-    (a[ h ].q = a[ h ].q || []).push(arguments)
-  };
-  o=f.createElement('script'),
-  m=f.getElementsByTagName('script')[0];
-  o.async=1; o.src=t; o.id='fathom-script';
-  m.parentNode.insertBefore(o,m)
-})(document, window, '//stats.verycool.tech/tracker.js', 'fathom');
-  fathom('set', 'siteId', 'PVKBO');
-  fathom('trackPageview');`,
-            }}
-          />
         </Helmet>
         <div className={styles.Viewport}>
           <div
