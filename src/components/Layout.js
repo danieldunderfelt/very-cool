@@ -5,6 +5,7 @@ import classnames from 'classnames'
 import Header from './Header'
 import '../style/index.scss'
 import styles from '../style/Layout.module.scss'
+import LinkList from './LinkList'
 
 const TemplateWrapper = ({ children, topSpace = false }) => (
   <StaticQuery
@@ -66,6 +67,7 @@ const TemplateWrapper = ({ children, topSpace = false }) => (
             )}>
             <Header />
             {children}
+            <LinkList className={styles.FooterLinkList} />
           </div>
         </div>
       </>

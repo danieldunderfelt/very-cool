@@ -57,3 +57,11 @@
 
 .PageContent {
 }
+
+.FooterLinkList {
+  display: block;
+
+  @include multiColumn {
+    display: none;
+  }
+}
