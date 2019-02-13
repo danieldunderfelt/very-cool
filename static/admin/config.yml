@@ -11,7 +11,7 @@ site_url: https://verycool.tech
 media_folder: static/img
 public_folder: /img
 
-logo_url: https://verycool.tech/static/img/verycool_logo.png
+logo_url: /img/verycool_logo.png
 
 collections:
   - name: 'article'
