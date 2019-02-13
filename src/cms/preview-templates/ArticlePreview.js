@@ -1,15 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ArticleTemplate } from '../../templates/article'
+import { format } from 'date-fns'
 
-const ArticlePreview = ({ entry, widgetFor }) => (
-  <ArticleTemplate
-    content={widgetFor('body')}
-    description={entry.getIn(['data', 'description'])}
-    tags={entry.getIn(['data', 'tags'])}
-    title={entry.getIn(['data', 'title'])}
-  />
-)
+const ArticlePreview = ({ entry, widgetFor }) => {
+  const post = {
+    frontmatter: {
+      tags: entry.getIn(['data', 'tags']),
+      date: format(entry.getIn(['data', 'date']), 'MMMM DD, YYYY'),
+      title: entry.getIn(['data', 'title']),
+      author: entry.getIn(['data', 'author']),
+    },
+    html: widgetFor('body'),
+  }
+
+  return <ArticleTemplate post={post} />
+}
 
 ArticlePreview.propTypes = {
   entry: PropTypes.shape({
