@@ -14,7 +14,12 @@ import get from 'lodash/get'
 import SEO from '../components/SEO'
 import config from '../../seoConfig'
 
-export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
+export const ArticleTemplate = ({
+  contentComponent,
+  helmet,
+  post,
+  isPreview,
+}) => {
   const PostContent = contentComponent || Content
   const {
     frontmatter: { tags = [], date, title, media_image, author },
@@ -25,13 +30,13 @@ export const ArticleTemplate = ({ contentComponent, helmet, post }) => {
     <div className={layoutStyles.Page}>
       <section className={styles.ArticlePage}>
         {helmet || ''}
-        <PostTags tags={tags} />
+        <PostTags tags={tags} renderLink={!isPreview} />
         <h1 className={styles.ArticleHeading}>{title}</h1>
         <div className={styles.PostMeta}>
           <Author name={author} />
           <TimeDisplay date={date} />
         </div>
-        <PostMediaImage mediaImage={media_image} />
+        <PostMediaImage mediaImage={media_image} description={title} />
         <PostContent content={html} />
       </section>
     </div>

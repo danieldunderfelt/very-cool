@@ -343,6 +343,12 @@
   p {
     color: inherit;
   }
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin: $margin 0;
+  }
 }
 
 .ArticleExcerpt {

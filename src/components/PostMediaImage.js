@@ -4,7 +4,12 @@ import get from 'lodash/get'
 
 class PostMediaImage extends Component {
   render() {
-    const { mediaImage } = this.props
+    const { mediaImage, description = '' } = this.props
+
+    if (typeof mediaImage === 'string') {
+      return <img alt={description} src={mediaImage} />
+    }
+
     const fluid = get(mediaImage, 'childImageSharp.fluid', null)
 
     if (!fluid) {
@@ -14,7 +19,7 @@ class PostMediaImage extends Component {
     return (
       <picture className={styles.MediaImage}>
         <source srcSet={fluid.srcSet} sizes={fluid.sizes} />
-        <img alt="Web Development" src={fluid.src} />
+        <img alt={description} src={fluid.src} />
       </picture>
     )
   }

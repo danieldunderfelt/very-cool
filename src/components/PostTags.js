@@ -5,7 +5,9 @@ import { kebabCase } from 'lodash'
 
 class PostTags extends Component {
   render() {
-    const { tags = [] } = this.props
+    const { tags = [], renderLink = true } = this.props
+
+    const LinkComponent = renderLink ? Link : 'span'
 
     return (
       <>
@@ -14,7 +16,9 @@ class PostTags extends Component {
             <ul>
               {tags.map(tag => (
                 <li key={`tag_${tag}`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  <LinkComponent to={`/tags/${kebabCase(tag)}/`}>
+                    {tag}
+                  </LinkComponent>
                 </li>
               ))}
             </ul>
