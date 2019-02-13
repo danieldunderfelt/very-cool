@@ -11,4 +11,4 @@ pinned: 2
 ---
 This is the very first post of the VERY COOL blog! If you are reading this, you've caught me with an unfinished site. Give me some time, and when you come back I'll have it finished and some articles written for your enjoyment (hopefully). Stay tuned!
 
-![Cats](/img/dxcwoclu8aa4xjw.jpg-large.jpg "CATS!")
+![cats](/img/dxcwoclu8aa4xjw.jpg-large.jpg "cats")
