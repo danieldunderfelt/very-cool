@@ -10,4 +10,4 @@ tags:
 author: Daniel Dunderfelt
 pinned: 0
 ---
-With the laucnh of the EOS RP supposedly imminent, a leak on Amazon has confirmed the price to be a mouth-watering 1299$. For a full-frame camera, that's a very good price, and I'm sure these will sell like hotcakes. Read more on [CanonRumors.com](https://www.canonrumors.com/canon-eos-rp-body-price-confirmed-at-1299-usd-and-were-very-happy-about-it/)
+With the launch of the EOS RP supposedly imminent, a leak on Amazon has confirmed the price to be a mouth-watering 1299$. For a full-frame camera, that's a very good price, and I'm sure these will sell like hotcakes. Read more on [CanonRumors.com](https://www.canonrumors.com/canon-eos-rp-body-price-confirmed-at-1299-usd-and-were-very-happy-about-it/)
