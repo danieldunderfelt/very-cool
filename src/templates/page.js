@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import classnames from 'classnames'
-import commonStyles from '../style/Common.module.scss'
 import layoutStyles from '../style/Layout.module.scss'
 import articleStyles from '../style/Article.module.scss'
 import Helmet from 'react-helmet'
@@ -16,7 +14,7 @@ export const PageTemplate = ({ title, content, contentComponent }) => {
   return (
     <div className={layoutStyles.Page}>
       <Helmet title={`${title} | ${config.siteTitle}`} />
-      <section className={classnames(commonStyles.PageContent)}>
+      <section>
         <h1 className={articleStyles.ArticleHeading}>{title}</h1>
         <PageContent content={content} />
       </section>

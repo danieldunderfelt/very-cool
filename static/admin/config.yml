@@ -77,9 +77,21 @@ collections:
   - name: 'page'
     label: 'Page'
     files:
-      - file: 'src/content/pages/about.md'
+      - file: 'src/content/about.md'
         label: 'About'
         name: 'about'
+        fields:
+          - {
+            label: 'Template Key',
+            name: 'template',
+            widget: 'hidden',
+            default: 'page',
+          }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/content/privacy-policy.md'
+        label: 'Privacy policy'
+        name: 'privacy-policy'
         fields:
           - {
             label: 'Template Key',
