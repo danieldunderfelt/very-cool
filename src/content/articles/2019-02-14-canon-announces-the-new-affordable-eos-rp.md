@@ -1,6 +1,6 @@
 ---
 template: article
-title: 'Canon announces the new, affordable EOS RP'
+title: 'Canon announces the new, affordable EOS RP: full frame mirrorless for $1299'
 date: 2019-02-14T17:26:05.991Z
 media_image: /img/01_canon_eos-rp_avaus.jpg
 tags:
@@ -19,9 +19,9 @@ That price is what makes the EOS RP *very cool*, but to hit that price point Can
 
 There are also some smaller things missing like the manual focus assist which I thought looked *very cool* in the EOS R, and I'm quite sad about that. It will also only do 8-bit video and has no C-Log, but I actually don't care about those things as I'm not really a video guy. Someone somewhere is probably quite angry about them being gone.
 
-And... that's about it for the drawbacks! For the price, which again, is $1299, you get a very competent full frame camera and access to the growing library of Canon RF lenses. They won't come as cheap, but hey, you saved a lot on the body.
+And... that's about it for the drawbacks! At least the ones that matter to me. For the price, which again, is $1299, you get a very competent full frame camera and access to the growing library of Canon RF lenses. They won't come as cheap, but hey, you saved a lot on the body.
 
-Spec highlights of the EOS RP:
+I won't go through all the specs and drawbacks, but here's highlights of the EOS RP:
 
 - 26MP full-frame sensor
 - Digic 8 processor (tbh I'm not sure how good this is if it has to crop the sensor for 4K video, but it's the best Canon has)
