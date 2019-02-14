@@ -1,6 +1,6 @@
 ---
 template: article
-title: 'Canon announces the new, afforable EOS RP'
+title: 'Canon announces the new, affordable EOS RP'
 date: 2019-02-14T17:26:05.991Z
 media_image: /img/01_canon_eos-rp_avaus.jpg
 tags:
