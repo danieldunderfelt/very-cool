@@ -17,7 +17,7 @@ But when I'm not doing those things, or when I'm not busy with my day job, photo
 
 That price is what makes the EOS RP *very cool*, but to hit that price point Canon has had to make some sacrifices. There's still no In-Body Image Stabilization (IBIS) to be seen, but I hear Canon is working on it. The 4K video feature has a very harsh 1.74x crop and it is limited to 24 frames per second.
 
-There are also some smaller things missing like the manual focus assist which I thought looked *very cool* in the EOS R, and I'm quite sad about that. It will also only do 8-bit video and has no C-Log, but I actually have no clue what those things do as I'm not a video nerd. Someone somewhere is probably quite angry about these being gone.
+There are also some smaller things missing like the manual focus assist which I thought looked *very cool* in the EOS R, and I'm quite sad about that. It will also only do 8-bit video and has no C-Log, but I actually don't care about those things as I'm not really a video guy. Someone somewhere is probably quite angry about them being gone.
 
 And... that's about it for the drawbacks! For the price, which again, is $1299, you get a very competent full frame camera and access to the growing library of Canon RF lenses. They won't come as cheap, but hey, you saved a lot on the body.
 
