@@ -14,7 +14,7 @@
   @include multiColumn {
     padding: 0;
     display: grid;
-    width: calc(960px - 2rem);
+    width: calc(#{$multiColumnWidth} - 2rem);
     grid-template-columns: 1.5fr 3.6fr;
   }
 

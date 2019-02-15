@@ -19,37 +19,6 @@
   .MediaImage {
     margin-bottom: 0;
   }
-
-  &.HighlightedPost {
-    // box-shadow: 5px 10px 30px 0 rgba(50, 5, 30, 0.075);
-    margin-bottom: $margin * 2;
-
-    @include multiColumn {
-      margin-left: -$margin * 1;
-      margin-right: 0;
-    }
-
-    @media screen and (min-width: #{$multiColumnWidth + 100px}) {
-      margin-left: -$margin * 2;
-      margin-right: -$margin * 2;
-    }
-
-    @include big {
-      margin-left: -$margin * 2;
-      margin-right: 0;
-    }
-
-    @media screen and (min-width: #{$bigWidth + 130px}) {
-      margin-left: -$margin * 2;
-      margin-right: -$margin * 2;
-    }
-
-    .ArticleHeading {
-      @include multiColumn {
-        font-size: rem(48px);
-      }
-    }
-  }
 }
 
 .Message {
@@ -77,8 +46,6 @@
   }
 
   .AuthorDisplay {
-    font-weight: 600;
-
     img {
       width: 2rem;
       height: 2rem;
@@ -88,7 +55,7 @@
   &.InPostListing {
     @include multiColumn {
       max-width: 85%;
-      margin-left: auto;
+      // margin-left: auto;
     }
   }
 
