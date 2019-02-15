@@ -8,11 +8,21 @@ import SEO from '../components/SEO'
 import Helmet from 'react-helmet'
 import config from '../../seoConfig'
 
-export const MessageTemplate = ({ helmet, post }) => {
+export const MessageTemplate = ({
+  contentComponent,
+  helmet,
+  post,
+  isPreview = false,
+}) => {
   return (
     <div>
       {helmet || ''}
-      <MessageItem isLink={false} post={post} />
+      <MessageItem
+        contentComponent={contentComponent}
+        isLink={false}
+        post={post}
+        isPreview={isPreview}
+      />
     </div>
   )
 }

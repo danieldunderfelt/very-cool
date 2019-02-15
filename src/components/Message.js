@@ -1,51 +1,52 @@
-import React, { Component } from 'react'
+import React from 'react'
 import articleStyles from '../style/Article.module.scss'
 import TimeDisplay from './TimeDisplay'
 import Author from './Author'
 import PostMediaImage from './PostMediaImage'
-import { HTMLContent } from './Content'
 import PostTags from './PostTags'
 import classnames from 'classnames'
 import { Link } from 'gatsby'
+import { HTMLContent } from './Content'
 
-class Message extends Component {
-  render() {
-    const {
-      post,
-      isLink = true,
-      isListing = false,
-      highlight = false,
-    } = this.props
-    const { frontmatter, fields, html } = post
-    const { tags = [], date, author, media_image } = frontmatter
+const Message = ({
+  post,
+  isLink = true,
+  isListing = false,
+  highlight = false,
+  isPreview = false,
+  contentComponent,
+}) => {
+  const PostContent = contentComponent || HTMLContent
 
-    const LinkComponent = isLink ? Link : 'div'
+  const { frontmatter, fields, html } = post
+  const { tags = [], date, author, media_image } = frontmatter
 
-    return (
+  const LinkComponent = !isPreview && isLink ? Link : 'div'
+
+  return (
+    <div
+      className={classnames(
+        articleStyles.Message,
+        !isLink ? articleStyles.NoEffectMessage : '',
+        isListing ? articleStyles.InPostListing : '',
+        highlight ? articleStyles.HighlightedMessage : ''
+      )}>
+      {highlight && <PostTags tags={tags} />}
+      <Author name={author} />
+      <PostContent content={html} />
+      {media_image && <PostMediaImage mediaImage={media_image} />}
       <div
         className={classnames(
-          articleStyles.Message,
-          !isLink ? articleStyles.NoEffectMessage : '',
-          isListing ? articleStyles.InPostListing : '',
-          highlight ? articleStyles.HighlightedMessage : ''
+          articleStyles.PostMeta,
+          articleStyles.MessageMeta
         )}>
-        {highlight && <PostTags tags={tags} />}
-        <Author name={author} />
-        <HTMLContent content={html} />
-        {media_image && <PostMediaImage mediaImage={media_image} />}
-        <div
-          className={classnames(
-            articleStyles.PostMeta,
-            articleStyles.MessageMeta
-          )}>
-          {!highlight && <PostTags tags={tags} />}
-          <LinkComponent to={fields.slug}>
-            <TimeDisplay date={date} />
-          </LinkComponent>
-        </div>
+        {!highlight && <PostTags tags={tags} renderLink={!isPreview} />}
+        <LinkComponent to={fields.slug}>
+          <TimeDisplay date={date} />
+        </LinkComponent>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Message
