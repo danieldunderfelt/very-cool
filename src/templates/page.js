@@ -14,7 +14,7 @@ export const PageTemplate = ({ title, content, contentComponent }) => {
   return (
     <div className={layoutStyles.Page}>
       <Helmet title={`${title} | ${config.siteTitle}`} />
-      <section>
+      <section className={articleStyles.ArticlePage}>
         <h1 className={articleStyles.ArticleHeading}>{title}</h1>
         <PageContent content={content} />
       </section>
