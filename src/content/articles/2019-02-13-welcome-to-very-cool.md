@@ -13,7 +13,7 @@ tags:
   - launch
   - welcome
 author: Daniel Dunderfelt
-pinned: 1
+pinned: 0
 ---
 Verycool.tech covers exciting developments in technology, mostly from the consumer point of view. Expect news about cool new gadgets, cool scientific developments, cool new games, cool... well, whatever I damn well want to write about! For now the content will be heavily biased towards what I personally find interesting, but feel free to suggest topics or send me tips on editor@verycool.tech. I'm also planning to bring on board other writers at some point, but let's see how this goes.
 
@@ -21,8 +21,10 @@ Verycool.tech covers exciting developments in technology, mostly from the consum
 
 Privacy is a very cool thing and something I take very seriously. That's why I'm running [Fathom analytics](https://usefathom.com/) on my own server for this site. Fathom only counts page views and logs referrers, so I'll know how many visitors I get and which pages they visit, but nothing specific about them. Exactly how website analytics should be. Fathom sets a cookie with a random identifier that refreshes every 30 minutes, just so your session will not be counted twice if you refresh the page. The cookie does not track you around the web and contains no personally identifiable information. If you want to opt out, just enable the "do not track" setting in your browser.
 
-It is very early days, but I do plan to have ads and sponsored content if things work out well enough. I haven't yet chosen an ad provider, but rest assured that my choice will be equally privacy-focused as my web analytics. Sponsored content will be loudly and proudly marked as such.
+It is very early days, but I do plan to monetize the content in some way if things work out well enough. While this is a sideproject and somewhat of an experiment, I still want it to generate revenue. Beyond the traditional ads and sponsored content, which will probably still exist on the site in some form, I am interested in exploring alternative, more innovative ways to monetize. The content will always be free for readers and I will take care to only use monetization methods that does not spy on my readers.
 
-I really hope you will enjoy verycool.tech! I plan to create new content many times a wekk, if not daily, so do check back often. If you have any feedback, ideas or news tips you can always reach me on editor@verycool.tech. I'd love to hear about it!
+I also do not plan to continue alone forever. I am planning to invite additional contributors on board in the future, and I'm not talking some unpaid gigs either. I can only write so much and I want verycool.tech to feature a variety of viewpoints and a broad range of topics. If you are interested in writing for verycool.tech feel absolutely free to get in touch!
+
+Hopefully you will enjoy verycool.tech! I plan to create new content many times a week, if not daily, so check back often. If you have any feedback, ideas or news tips you can always reach me at editor@verycool.tech. I'd love to hear about it!
 
 See you in the next article!
