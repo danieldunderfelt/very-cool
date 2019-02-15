@@ -6,7 +6,7 @@ Verycool.tech is a digital media website created by Daniel Dunderfelt. We publis
 
 ### The technology
 
-The site is built with open-source technologies (GatsbyJS)[https://www.gatsbyjs.org/] and [React](https://reactjs.org/). We use [Netlify CMS](https://www.netlifycms.org/) to manage content and we are hosted on [Netlify](https://www.netlify.com/). These technologies and services are what enables this website to work reliably and fast like lightning.
+The site is built with open-source technologies (GatsbyJS)[https://www.gatsbyjs.org/] and [React](https://reactjs.org/). We use [Netlify CMS](https://www.netlifycms.org/) to manage content and we are hosted on [Netlify](https://www.netlify.com/). These technologies and services are what enables this website to work reliably and fast like lightning!
 
 For analytics we use the open-source app [Fathom](https://usefathom.com/) installed on our own server. Fathom allows us to gather valuable insight into how the website is performing while not encroaching on our readers' privacy. Read more in our [privacy policy](/privacy-policy).
 
