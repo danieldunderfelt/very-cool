@@ -16,18 +16,6 @@ const Header = class extends React.Component {
           </Link>
           <LinkList className={styles.HeaderLinkList} />
         </div>
-        <div className={styles.HeaderContentBottom}>
-          <p>
-            Created by{' '}
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              title="danieldunderfelt.com"
-              href="https://danieldunderfelt.com">
-              Daniel Dunderfelt
-            </a>
-          </p>
-        </div>
       </nav>
     )
   }

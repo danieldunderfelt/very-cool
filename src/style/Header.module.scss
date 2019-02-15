@@ -40,6 +40,7 @@
 
   @include multiColumn {
     position: fixed;
+    max-width: 220px;
   }
 }
 
@@ -48,6 +49,7 @@
 
   @include multiColumn {
     display: block;
+    margin-top: $margin * 2;
   }
 }
 
@@ -85,24 +87,22 @@
   }
 }
 
-.HeaderContentBottom {
-  display: none;
+.PageList {
+  margin: $margin * 1.25 0 0;
+  padding: $margin * 0.75 0 0;
+  border-top: 1px solid $lightGrey;
+  list-style: none;
+  font-size: 0.875rem;
 
-  @include multiColumn {
-    display: block;
-    position: fixed;
-    left: $margin;
-    bottom: $margin;
-    font-size: 0.875rem;
-    color: $grey;
-  }
-
-  p {
-    text-align: left;
-    color: inherit;
+  li {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    color: $blueGrey;
   }
 
   a {
-    color: $blueGrey;
+    color: inherit;
   }
 }
