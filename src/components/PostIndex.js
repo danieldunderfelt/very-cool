@@ -127,6 +127,7 @@ export const postIndexQuery = graphql`
         tags
         author
         pinned
+        ingress
         media_image {
           childImageSharp {
             fixed {

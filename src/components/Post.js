@@ -13,7 +13,9 @@ class Post extends Component {
   render() {
     const { post, highlight = false } = this.props
     const { frontmatter, fields, excerpt } = post
-    const { tags = [], title, date, author, media_image } = frontmatter
+    const { tags = [], title, date, author, media_image, ingress } = frontmatter
+
+    const articleIngress = ingress || excerpt
 
     return (
       <div
@@ -28,7 +30,7 @@ class Post extends Component {
             <Author name={author} />
             <TimeDisplay date={date} />
           </div>
-          <HTMLContent content={excerpt} />
+          <HTMLContent content={articleIngress} />
           <PostMediaImage mediaImage={media_image} />
         </Link>
       </div>
