@@ -3,9 +3,13 @@ import PropTypes from 'prop-types'
 import styles from '../style/Article.module.scss'
 import classnames from 'classnames'
 
-export const HTMLContent = ({ content, className }) => (
+export const HTMLContent = ({ content, className, ingress = false }) => (
   <div
-    className={classnames(className, styles.ArticleBody)}
+    className={classnames(
+      className,
+      styles.ArticleBody,
+      ingress ? styles.ArticleIngress : ''
+    )}
     dangerouslySetInnerHTML={{ __html: content }}
   />
 )

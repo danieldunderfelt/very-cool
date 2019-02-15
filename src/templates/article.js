@@ -22,7 +22,7 @@ export const ArticleTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
   const {
-    frontmatter: { tags = [], date, title, media_image, author },
+    frontmatter: { tags = [], date, title, media_image, author, ingress = '' },
     html,
   } = post
 
@@ -37,6 +37,7 @@ export const ArticleTemplate = ({
           <TimeDisplay date={date} />
         </div>
         <PostMediaImage mediaImage={media_image} description={title} />
+        <PostContent ingress content={ingress} />
         <PostContent content={html} />
       </section>
     </div>
@@ -54,7 +55,7 @@ const Article = ({ data }) => {
   const {
     fields,
     longExcerpt,
-    frontmatter: { title, author, tags, media_image, normalDate },
+    frontmatter: { title, author, tags, media_image, normalDate, ingress = '' },
   } = post
 
   const article = {
@@ -63,7 +64,7 @@ const Article = ({ data }) => {
     imgUrl: get(media_image, 'childImageSharp.fluid.src', ''),
     date: normalDate,
     tags: tags,
-    description: longExcerpt,
+    description: ingress || longExcerpt,
     authorName: author,
   }
 
@@ -109,6 +110,7 @@ export const pageQuery = graphql`
         title
         tags
         author
+        ingress
         media_image {
           childImageSharp {
             fixed {
