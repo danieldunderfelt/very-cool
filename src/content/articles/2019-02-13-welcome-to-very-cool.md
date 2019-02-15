@@ -3,6 +3,11 @@ template: article
 title: Welcome to the home of all things VERY COOL!
 date: 2019-02-13T17:39:00.000Z
 media_image: /img/og-image.png
+ingress: >-
+  Welcome, weary traveler, to verycool.tech! This is the launch post, so yeah,
+  we're quite young. And when I say "we", I mean me. There's only one of me so
+  far. I am Daniel Dunderfelt, creator, editor and first contributor to
+  verycool.tech. It's an honor to make your acquaintance!
 tags:
   - verycool
   - launch
@@ -10,8 +15,6 @@ tags:
 author: Daniel Dunderfelt
 pinned: 1
 ---
-Welcome, weary traveler, to verycool.tech! This is the launch post, so yeah, we're quite young. And when I say "we", I mean me. There's only one of me so far. I am Daniel Dunderfelt, creator, editor and first contributor to verycool.tech. It's an honor to make your acquaintance!
-
 Verycool.tech covers exciting developments in technology, mostly from the consumer point of view. Expect news about cool new gadgets, cool scientific developments, cool new games, cool... well, whatever I damn well want to write about! For now the content will be heavily biased towards what I personally find interesting, but feel free to suggest topics or send me tips on editor@verycool.tech. I'm also planning to bring on board other writers at some point, but let's see how this goes.
 
 "But Daniel", you say, "there's a lot of tech news sites out there already! Why are you doing this?". That's a very good question that I don't have a direct answer to, other than that I want to. I'm pretty into all things tech, so if I'm gonna write about something it might as well be that. I might even have an interesting opinion or take on things that you might not find elsewhere. I say that partly due to the fact that I don't write anywhere else, and partly because I like to think that I have a unique and interesting perspective on important matters such as very cool tech things. But you'll be the judge of that.
