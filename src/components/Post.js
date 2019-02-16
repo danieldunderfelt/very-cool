@@ -24,7 +24,7 @@ class Post extends Component {
           highlight ? articleStyles.HighlightedPost : ''
         )}>
         <PostTags tags={tags} />
-        <Link className={commonStyles.HeadingLink} to={fields.slug}>
+        <Link className={articleStyles.PostLink} to={fields.slug}>
           <h2 className={articleStyles.ArticleHeading}>{title}</h2>
           <div className={articleStyles.PostMeta}>
             <Author name={author} />
