@@ -22,8 +22,8 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'Barlow:300,300i,400,400i,600,600i,900',
-          'barlow+Semi+Condensed:300,400,500,900',
+          'Barlow:300,300i,400,400i,700,700i,900',
+          'IBM+Plex+Mono:300,400,700',
         ],
       },
     },

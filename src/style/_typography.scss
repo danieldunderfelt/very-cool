@@ -34,13 +34,13 @@ h5 {
 }
 
 h1 {
-  font-size: rem(42px);
-  font-weight: 600;
+  font-size: rem(48px);
+  font-weight: 700;
 }
 
 h2 {
   font-size: rem(36px);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h3 {
@@ -50,12 +50,12 @@ h3 {
 
 h4 {
   font-size: rem(24px);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h5 {
   font-size: rem(20px);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h6 {
@@ -67,6 +67,7 @@ p {
   color: $textColor;
   text-align: justify;
   line-height: 1.4;
+  letter-spacing: 0.005rem;
 
   &:first-child {
     margin-top: 0;
@@ -104,4 +105,9 @@ p a {
   &:hover {
     text-decoration-color: rgba($blue, 0.6);
   }
+}
+
+li {
+  letter-spacing: 0.005rem;
+  line-height: 1.5;
 }
