@@ -3,14 +3,19 @@ template: article
 title: 'Canon announces the new, affordable EOS RP: full frame mirrorless for $1299'
 date: 2019-02-14T17:26:05.991Z
 media_image: /img/01_canon_eos-rp_avaus.jpg
+ingress: >-
+  It is here: the full frame mirrorless digital camera for the enthusiastic
+  amateur. At $1299 it is the most affordable full frame camera yet, and that
+  price is the coolest spec about it. I'm personally in the dead center of the
+  target audience for this camera, and to say I'm excited to see it announced
+  after all these leaks is an understatement.
 tags:
   - cameras
   - canon
   - eos rp
   - mirrorless
 author: Daniel Dunderfelt
-pinned: 1
-ingress: "It is here: the full frame mirrorless digital camera for the enthusiastic amateur. At $1299 it is the most affordable full frame camera yet, and that price is the coolest spec about it. I'm personally in the dead center of the target audience for this camera, and to say I'm excited to see it announced after all these leaks is an understatement."
+pinned: ''
 ---
 
 I'm a developer by day, and my hobbies include programming sideprojects, coding fun stuff and getting better at developing software. And writing articles for verycool.tech of course.
