@@ -68,7 +68,6 @@ p {
   color: $textColor;
   text-align: justify;
   line-height: 1.4;
-  letter-spacing: 0.005rem;
 
   &:first-child {
     margin-top: 0;
@@ -109,6 +108,5 @@ p a {
 }
 
 li {
-  letter-spacing: 0.005rem;
   line-height: 1.5;
 }

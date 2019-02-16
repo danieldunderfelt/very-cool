@@ -27,8 +27,7 @@ export default function HTML(props) {
 
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-(function(f, a, t, h, o, m){
+            __html: `(function(f, a, t, h, o, m){
 	a[h]=a[h]||function(){
 		(a[h].q=a[h].q||[]).push(arguments)
 	};
@@ -38,8 +37,7 @@ export default function HTML(props) {
 	m.parentNode.insertBefore(o,m)
 })(document, window, '//stats.verycool.tech/tracker.js', 'fathom');
 fathom('set', 'siteId', 'PVKBO');
-fathom('trackPageview');
-        `,
+fathom('trackPageview');`,
           }}
         />
       </body>
