@@ -30,6 +30,6 @@ The G8 ThinQ has been the victim of multiple leaks, including some posted on XDA
 
 LG has officially talked about the G8 ThinQ's 3D ToF camera (housed in the fashionable notch) that will be useful for AR applications and secure face recognition.
 
-MWC 2019 is coming up on the 24:th of February and LG is set to talk more about the G8 ThinQ there. If sound-blasting screens and very incremental updates to Android phones is your thing, put it in your calendar.
+MWC 2019 is coming up on the 24:th of February and LG is set to talk more about the G8 ThinQ there. If sound-blasting screens and very incremental updates to Android phones is your thing, put it in your calendar. In the meantime, check out the leak analysis on [XDA Developers](https://www.xda-developers.com/lg-g8-thinq-leaks-rumors/) for more information.
 
 \* *not an official term*
