@@ -12,4 +12,4 @@ tags:
 author: Daniel Dunderfelt
 pinned: 0
 ---
-Another cool thing that's being announched at MWC 2019: a foldable watch phone thing from Nubia! Foldable OLED screens are slowly entering the market, and it is only natural to wear one around your wrist. Color me intrigued!
+Another cool thing that's being announched at MWC 2019: a foldable watch phone thing from Nubia! Foldable OLED screens are slowly entering the market, and it is only natural to wear one around your wrist. Color me intrigued! Read more at [Tom's Guide](https://www.tomsguide.com/us/nubia-alpha-smart-watch-phone,news-29411.html).
