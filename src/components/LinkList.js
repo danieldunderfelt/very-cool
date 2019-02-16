@@ -22,7 +22,7 @@ const LinkList = ({ className }) => {
             href="https://discord.gg/rqWmCnX"
             target="_blank"
             rel="noopener noreferrer">
-            <FaDiscord /> Get invited on Discord
+            <FaDiscord /> Verycool on Discord
           </a>
         </li>
         <li>
