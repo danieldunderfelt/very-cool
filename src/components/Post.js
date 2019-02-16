@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import articleStyles from '../style/Article.module.scss'
-import commonStyles from '../style/Common.module.scss'
 import TimeDisplay from './TimeDisplay'
 import Author from './Author'
 import PostMediaImage from './PostMediaImage'

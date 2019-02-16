@@ -19,11 +19,17 @@ module.exports = {
     'gatsby-plugin-catch-links',
     `gatsby-plugin-twitter`,
     {
-      resolve: 'gatsby-plugin-google-fonts',
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          'Barlow:300,300i,400,400i,700,700i,900',
-          'IBM+Plex+Mono:300,400,700',
+          {
+            family: `Barlow`,
+            variants: [`300`, `300i`, `400`, `400i`, `700`, `700i`],
+          },
+          {
+            family: `IBM Plex Mono`,
+            variants: [`300`, `400`, `700`],
+          },
         ],
       },
     },
