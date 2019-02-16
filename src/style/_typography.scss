@@ -8,7 +8,7 @@ html {
   color: $textColor;
 
   @include medium {
-    font-size: $smallFontSize;
+    font-size: $mediumFontSize;
   }
 
   @include big {
@@ -18,8 +18,8 @@ html {
 
 body {
   color: $textColor;
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -66,7 +66,7 @@ h6 {
 p {
   color: $textColor;
   text-align: justify;
-  letter-spacing: 0.005em;
+  line-height: 1.4;
 
   &:first-child {
     margin-top: 0;

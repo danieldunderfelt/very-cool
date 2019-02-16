@@ -37,17 +37,17 @@ const LinkList = ({ className }) => {
       <ul className={styles.PageList}>
         <li>
           <Link to="/articles/2019-02-13-welcome-to-very-cool/">
-            <FiChevronRight size="0.875rem" /> Introduction post
+            <FiChevronRight size="18px" /> Introduction post
           </Link>
         </li>
         <li>
           <Link to="/about">
-            <FiChevronRight size="0.875rem" /> About
+            <FiChevronRight size="18px" /> About
           </Link>
         </li>
         <li>
           <Link to="/privacy-policy">
-            <FiChevronRight size="0.875rem" /> Privacy policy
+            <FiChevronRight size="18px" /> Privacy policy
           </Link>
         </li>
       </ul>
