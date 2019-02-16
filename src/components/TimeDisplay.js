@@ -1,11 +1,11 @@
 import React from 'react'
-import { ReactComponent as Clock } from '../icons/clock.svg'
 import styles from '../style/Article.module.scss'
+import { FiClock } from 'react-icons/fi'
 
 export default function TimeDisplay({ date }) {
   return (
     <div className={styles.TimeDisplay}>
-      <Clock /> {date}
+      <FiClock color="var(--grey)" /> {date}
     </div>
   )
 }

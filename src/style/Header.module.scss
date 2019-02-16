@@ -77,13 +77,8 @@
   img {
     display: inline-block;
     width: 1rem;
-    max-height: 1rem;
     margin-right: 0.75rem;
     margin-top: 6px;
-
-    path {
-      fill: var(--blue);
-    }
   }
 }
 
@@ -97,12 +92,19 @@
   li {
     margin-top: 0.5rem;
     margin-right: 1rem;
-    display: flex;
-    align-items: center;
     color: $blueGrey;
   }
 
   a {
     color: inherit;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  svg,
+  img {
+    display: inline-block;
+    margin-right: 0.75rem;
+    margin-top: 4px;
   }
 }

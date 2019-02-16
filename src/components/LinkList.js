@@ -1,9 +1,8 @@
 import React from 'react'
 import styles from '../style/Header.module.scss'
-import { ReactComponent as Twitter } from '../icons/twitter.svg'
-import { ReactComponent as Discord } from '../icons/discord.svg'
-import { ReactComponent as Email } from '../icons/email.svg'
 import { Link } from 'gatsby'
+import { FaDiscord, FaTwitter } from 'react-icons/fa'
+import { FiMail, FiChevronRight } from 'react-icons/fi'
 
 const LinkList = ({ className }) => {
   return (
@@ -15,7 +14,7 @@ const LinkList = ({ className }) => {
             href="https://twitter.com/verycooltech"
             target="_blank"
             rel="noopener noreferrer">
-            <Twitter /> @verycooltech
+            <FaTwitter /> @verycooltech
           </a>
         </li>
         <li>
@@ -23,7 +22,7 @@ const LinkList = ({ className }) => {
             href="https://discord.gg/rqWmCnX"
             target="_blank"
             rel="noopener noreferrer">
-            <Discord /> Get invited on Discord
+            <FaDiscord /> Get invited on Discord
           </a>
         </li>
         <li>
@@ -31,21 +30,25 @@ const LinkList = ({ className }) => {
             href="mailto:editor@verycool.tech"
             target="_blank"
             rel="noopener noreferrer">
-            <Email /> editor@verycool.tech
+            <FiMail /> editor@verycool.tech
           </a>
         </li>
       </ul>
       <ul className={styles.PageList}>
         <li>
           <Link to="/articles/2019-02-13-welcome-to-very-cool/">
-            Introduction post
+            <FiChevronRight size="0.875rem" /> Introduction post
           </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">
+            <FiChevronRight size="0.875rem" /> About
+          </Link>
         </li>
         <li>
-          <Link to="/privacy-policy">Privacy policy</Link>
+          <Link to="/privacy-policy">
+            <FiChevronRight size="0.875rem" /> Privacy policy
+          </Link>
         </li>
       </ul>
     </div>
