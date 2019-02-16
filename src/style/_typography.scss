@@ -66,6 +66,7 @@ h6 {
 p {
   color: $textColor;
   text-align: justify;
+  letter-spacing: 0.005em;
 
   &:first-child {
     margin-top: 0;
@@ -86,13 +87,21 @@ a {
   color: inherit;
   outline: 0;
   text-decoration: none;
-  transition: transform 0.1s ease-out;
+  transition: transform 0.075s ease-out;
 
   &:hover {
-    transform: scale(1.015);
+    transform: scale(1.075);
   }
 }
 
 p a {
   color: $blue;
+  transform: none;
+  text-decoration: underline;
+  text-decoration-color: rgba($blue, 0);
+  transition: text-decoration-color 0.1s ease-out;
+
+  &:hover {
+    text-decoration-color: rgba($blue, 0.6);
+  }
 }
