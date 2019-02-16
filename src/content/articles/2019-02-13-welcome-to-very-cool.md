@@ -36,6 +36,10 @@ Essentially, I want verycool.tech to be valuable to both me and you. For example
 
 I also do not plan to continue alone forever. I am planning to invite additional contributors on board in the future, and I'm not talking some unpaid gigs either (well, as soon as I get the monetization part figured out). I can only write so much and I want verycool.tech to feature a variety of viewpoints and a broader range of topics than what I am personally interested in. If writing for verycool.tech strikes you as something that you might wanna try, feel absolutely free to get in touch!
 
-Hopefully you will enjoy verycool.tech! I plan to create new content many times a week, if not daily, so check back often. If you have any feedback, ideas or news tips you can always reach me at editor@verycool.tech. I'd love to hear about it.
+### Future plans
+
+Confession time: I didn't only buy the verycool.tech domain. I actually bought a handful of verycool.something domains. In addition to continuously developing this site, I am planning more sites and apps under the Verycool "brand". Stay tuned.
+
+Hopefully you will enjoy verycool.tech! I plan to create new content many times a week, if not daily, so check back often. If you have any feedback, ideas, news tips or whatever else you can always reach me at editor@verycool.tech. I'd love to hear about it.
 
 See you in the next article!
