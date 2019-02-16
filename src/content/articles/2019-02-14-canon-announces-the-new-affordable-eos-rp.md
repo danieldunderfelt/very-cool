@@ -15,7 +15,7 @@ tags:
   - eos rp
   - mirrorless
 author: Daniel Dunderfelt
-pinned: ''
+pinned: 0
 ---
 
 I'm a developer by day, and my hobbies include programming sideprojects, coding fun stuff and getting better at developing software. And writing articles for verycool.tech of course.

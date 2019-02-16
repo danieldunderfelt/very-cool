@@ -67,7 +67,7 @@ class PostIndex extends React.Component {
       <section className={style.PostsList}>
         {sortedPosts.map(({ node: post }) => {
           const template = get(post, 'frontmatter.template', ARTICLE_TEMPLATE)
-          const pinned = get(post, 'frontmatter.pinned', false)
+          const pinned = get(post, 'frontmatter.pinned', 0) || 0
           let shouldHighlight = false
 
           if (highlightPinned && !didHighlight.includes(template)) {
