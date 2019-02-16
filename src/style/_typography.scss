@@ -26,7 +26,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: 'Barlow', sans-serif;
   color: $textColor;
   line-height: 1.2;
@@ -35,22 +36,22 @@ h5 {
 
 h1 {
   font-size: rem(48px);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h2 {
   font-size: rem(36px);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h3 {
   font-size: rem(28px);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h4 {
   font-size: rem(24px);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h5 {
@@ -59,8 +60,8 @@ h5 {
 }
 
 h6 {
-  font-family: 'Barlow', sans-serif;
-  font-weight: 300;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 p {
