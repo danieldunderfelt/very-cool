@@ -9,7 +9,7 @@ ingress: >-
   journey to unbelievably thin, all-screen phones. But why do we need a notch,
   and is thin-and-all-screen phones even something that people want?
 tags:
-  - Design
+  - design
   - rant
   - phones
   - apple
