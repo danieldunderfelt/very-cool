@@ -19,7 +19,7 @@ pinned: 0
 ---
 To be fair, the Germans are acknowledging Tesla as a serious competitor, but we've yet to see a Tesla killer emerge from the land of precision engineering. No, the first ones to throw down the gauntlet are the Swedes (along with the Chinese), who today unveiled the Polestar 2, an all-electric "fastback" with two electric motors and a 78 kWh battery capacity.
 
-It sounds really good: the dual motors in the Polestar 2 produce a combined 408 hp (that's 300 kW) and 660 Nm (487 lb-ft) of torque. The two electric motors distribute their power to all four wheels too, and they can get the car going 100km/h in under 45 seconds.
+It sounds really good: the dual motors in the Polestar 2 produce a combined 408 hp (that's 300 kW) and 660 Nm (487 lb-ft) of torque. The two electric motors distribute their power to all four wheels too, and they can get the car going 100km/h in under 5 seconds.
 
 The price, after a 12 month period of being set at 59,900€, will go down to an a bit more affordable 39,900€. That's definitely Tesla Model 3 territory and this should be quite the fight.
 
@@ -31,19 +31,19 @@ I'm a huge fan of Volvo's design, and the Polestar 2 is no different. The design
 
 ![Polestar 2 - interior](/img/polestar_2_013.jpg)
 
-The insides look very cool as well, borrowing a large (11 inch) center-mounted display from Tesla. The infotainment system is powered by Android, bringing Google services like Google Assistant and Google Maps directly into the car, without you needing to somehow mount your phone somewhere. it looks clean and very high tech.
+The insides look very cool as well, borrowing a large (11 inch) center-mounted display from Tesla. The infotainment system is powered by Android, bringing Google services like Google Assistant and Google Maps directly into the car, without you needing to somehow mount your phone somewhere. It looks clean and very high tech.
 
 ### Polestar vs Tesla
 
-So how does it compare to the Model 3 which is squarely in its sights? Glad you asked. First off, the base model of the Model 3 is rear-wheel drive only, and there won't be such a version of the Polestar 2 as far as I know. They seem very equal on paper (at least comparing what's available here in Europe), so we'll have to wait for actual reviews to know which one wins this round.
+So how does it compare to the Model 3 which is squarely in its sights? Glad you asked. They seem very equal on paper (at least comparing what's available here in Europe), so we'll have to wait for actual reviews to know which one wins this round.
 
-But until those come out, I think a pro-vs-pro list is in order. Note that there are several versions of the Model 3, and I'll list specs from the less expensive "Long range" model.
+But until those come out, I think a pro-vs-pro list is in order, where I highlight the main specs that are better in one car over the other. Note that there are several versions of the Model 3, and I'll list specs from the less expensive "long range" model which matches the Polestar 2 in price.
 
 #### Tesla Model 3 pros
 
 - 560 km range
 - 4.8s 0-100km/h time
-- Tesla Autopilot
+- Tesla Autopilot (not sure if the Polestar 2 has an anser to Autopilot) 
 - Very good safety
 
 #### Polestar 2 pros
@@ -52,15 +52,15 @@ But until those come out, I think a pro-vs-pro list is in order. Note that there
 - "Under 5s" 0-100km/h time (might end up being better than the Tesla, we don't know yet.)
 - 408 bhp
 - After 12 months the price will go down to 39,000€, which is almost 20,000€ less than the Tesla. Before that they cost basically the same.
-- Very good safety
+- Very good safety (Volvo is known for their safety so I'm assuming that that carries over to Polestar)
 
-The cars are direct competitors, and they both have very compelling pro's. What can't be found on the spec sheets is the "special" feeling of a Tesla, or the cool confidence that a vehicle from an established and reputable car manufacturer brings. That's basically up to the customer to decide.
+The cars are direct competitors, and they both have very compelling pro's. What can't be found on the spec sheets is the special, "bleeding edge industry disruptor" feeling of a Tesla, or the cool confidence that a vehicle from an established and reputable car manufacturer brings. That's basically up to the customer to decide.
 
 ### The price
 
-The pricing model of the Polestar 2 is interesting. I get it too - they probably need some time to ramp up production and figure things out, so they don't even want a high volume at the beginning. The Model 3 also needed some time to gel, so to speak. But usually the cost of being an early adopter is not spoken of, and here Polestar is saying that in a year, we'll get a sizable and permanent price decrease. Early adopters always know that they are paying a premium to be first, so the people who want and can afford the Polestar 2 will not be dissuaded by this.
+The pricing model of the Polestar 2 is interesting. I get it too - they probably need some time to ramp up production and figure things out, so they don't even want a high volume at the beginning. The Model 3 also needed some time to gel, so to speak. But the cost of being an early adopter is not usually spoken of, and here Polestar is saying that in a year, we'll get a sizable and permanent price decrease. Early adopters always know that they are paying a premium to be first, so the people who want and can afford the Polestar 2 will not be dissuaded by this.
 
-The Tesla Model 3 was always promised to be a $35,000 car, but that version has not materialised yet. Tesla's Elon Musk has promised that it will come, so I have no doubt in my mind that Polestar is deliberately trying to match the price of the Model 3, also taking into account future price changes. But when that most-basic Model 3 version arrives, the Polestar 2 is poised to compare very favorably against it. If we take a peek at the current base version of the Model 3, only available in the US as far as I know, the Polestar 2 already beats it on paper. 35,000 dollars easily becomes 40,000 euros on the way over the Atlantic, so Polestar will have a much better product for roughly the same price as the most-basic Tesla.
+The Tesla Model 3 was always promised to be a $35,000 car, but that version has not materialized yet. Tesla's Elon Musk has promised that it will come, so I have no doubt in my mind that Polestar is deliberately trying to match the price of the Model 3, also taking into account future versions. But when that most-basic Model 3 version arrives, the Polestar 2 is poised to compare very favorably against it. If we take a peek at the current base version of the Model 3 (only available in the US as far as I know) the Polestar 2 already beats it on paper. 35,000 dollars easily becomes 40,000 euros on the way over the Atlantic, so Polestar will have a much better product for roughly the same price as the most-basic Tesla.
 
 Interesting.
 
