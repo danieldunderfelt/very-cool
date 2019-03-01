@@ -62,8 +62,6 @@ The pricing model of the Polestar 2 is interesting. I get it too - they probably
 
 The Tesla Model 3 was always promised to be a $35,000 car, but that version has not materialized yet. Tesla's Elon Musk has promised that it will come, so I have no doubt in my mind that Polestar is deliberately trying to match the price of the Model 3, also taking into account future versions. But when that most-basic Model 3 version arrives, the Polestar 2 is poised to compare very favorably against it. If we take a peek at the current base version of the Model 3 (only available in the US as far as I know) the Polestar 2 already beats it on paper. 35,000 dollars easily becomes 40,000 euros on the way over the Atlantic, so Polestar will have a much better product for roughly the same price as the most-basic Tesla.
 
-Interesting.
-
 ### What this means for you
 
 Even if you are not currently in the market for a new car, the arrival of the Polestar 2 should be a very welcome thing indeed. Tesla was in sore need of a good competitor, and it will make all parties put their game face on and their best foot forward. Technology will advance and the price will come down on all sides. Just wait until the Germans arrive!
