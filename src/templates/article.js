@@ -57,7 +57,7 @@ const Article = ({ data }) => {
   const {
     fields,
     longExcerpt,
-    frontmatter: { title, author, tags, media_image, normalDate, ingress = '' },
+    frontmatter: { title, tags, media_image, normalDate, ingress = '' },
   } = post
 
   const article = {

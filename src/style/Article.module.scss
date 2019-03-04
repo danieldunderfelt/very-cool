@@ -247,6 +247,11 @@
       height: 1.75rem;
     }
   }
+
+  &:hover {
+    transform: none;
+    // TODO: Author hover styles
+  }
 }
 
 .PostMeta {

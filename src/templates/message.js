@@ -38,7 +38,7 @@ const Message = ({ data }) => {
     fields,
     longExcerpt,
     titleExcerpt: title,
-    frontmatter: { author, tags, media_image, normalDate },
+    frontmatter: { tags, media_image, normalDate },
   } = post
 
   const article = {
@@ -48,7 +48,7 @@ const Message = ({ data }) => {
     date: normalDate,
     tags: tags,
     description: longExcerpt,
-    authorName: author,
+    authorName: fields.author.name,
   }
 
   return (

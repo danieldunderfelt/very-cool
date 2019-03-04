@@ -7,7 +7,16 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   return graphql(`
-    {
+    query createPagesQuery {
+      allAuthor {
+        edges {
+          node {
+            id
+            nickname
+            email
+          }
+        }
+      }
       allMarkdownRemark(limit: 1000) {
         edges {
           node {
@@ -67,6 +76,20 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve(`src/templates/tags.js`),
         context: {
           tag,
+        },
+      })
+    })
+
+    const authors = result.data.allAuthor.edges
+
+    authors.forEach(({ node }) => {
+      const authorPath = `/author/${_.kebabCase(node.nickname)}/`
+
+      createPage({
+        path: authorPath,
+        component: path.resolve(`src/templates/author.js`),
+        context: {
+          ...node,
         },
       })
     })
