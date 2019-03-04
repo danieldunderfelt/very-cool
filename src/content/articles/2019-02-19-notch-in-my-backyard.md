@@ -13,7 +13,7 @@ tags:
   - rant
   - phones
   - apple
-author: Daniel Dunderfelt
+author: editor@verycool.tech
 pinned: 0
 ---
 Before Apple released the original iPhone back in 2007 there was an incredible variety of designs in mobile phones. Just look at of these, from Nokia alone:

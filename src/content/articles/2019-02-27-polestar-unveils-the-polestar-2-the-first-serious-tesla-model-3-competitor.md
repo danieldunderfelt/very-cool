@@ -14,7 +14,7 @@ tags:
   - electric vehicles
   - polestar
   - tesla
-author: Daniel Dunderfelt
+author: editor@verycool.tech
 pinned: 0
 ---
 To be fair, the Germans are acknowledging Tesla as a serious competitor, but we've yet to see a Tesla killer emerge from the land of precision engineering. No, the first ones to throw down the gauntlet are the Swedes (along with the Chinese), who today unveiled the Polestar 2, an all-electric "fastback" with two electric motors and a 78 kWh battery capacity.

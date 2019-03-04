@@ -13,7 +13,7 @@ tags:
   - mobile
   - sound
   - display
-author: Daniel Dunderfelt
+author: editor@verycool.tech
 pinned: 0
 ---
 It's always a challenge to fit in the various parts that people expect their smartphones to have, so in the battle to keep the body thin and the bezels small, components will have to pull double-duty. It's a team effort after all. For their upcoming G8 ThinQ, LG decided that the screen wasn't doing enough already and has coaxed it into outputting sound.

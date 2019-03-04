@@ -14,7 +14,7 @@ tags:
   - canon
   - eos rp
   - mirrorless
-author: Daniel Dunderfelt
+author: editor@verycool.tech
 pinned: 0
 ---
 
