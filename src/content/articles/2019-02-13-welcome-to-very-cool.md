@@ -12,7 +12,7 @@ tags:
   - verycool
   - launch
   - welcome
-author: Daniel Dunderfelt
+author: editor@verycool.tech
 pinned: 0
 ---
 
