@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from '../style/Article.module.scss'
-import danielAvatar from '../img/daniel_avatar.png'
 
-export default function Author({ name }) {
+export default function Author({ author }) {
+  const { name, avatar } = author
+  
   return (
     <div className={styles.AuthorDisplay}>
-      <img alt={name} src={danielAvatar} /> {name}
+      <img alt={name} src={avatar} /> {name}
     </div>
   )
 }

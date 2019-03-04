@@ -18,11 +18,13 @@ export const ArticleTemplate = ({
   contentComponent,
   helmet,
   post,
+  authors,
   isPreview,
 }) => {
   const PostContent = contentComponent || Content
   const {
-    frontmatter: { tags = [], date, title, media_image, author, ingress = '' },
+    fields: { author },
+    frontmatter: { tags = [], date, title, media_image, ingress = '' },
     html,
   } = post
 
@@ -33,7 +35,7 @@ export const ArticleTemplate = ({
         <PostTags tags={tags} renderLink={!isPreview} />
         <h1 className={styles.ArticleHeading}>{title}</h1>
         <div className={styles.PostMeta}>
-          <Author name={author} />
+          <Author author={author} />
           <TimeDisplay date={date} />
         </div>
         <PostMediaImage mediaImage={media_image} description={title} />
@@ -65,7 +67,7 @@ const Article = ({ data }) => {
     date: normalDate,
     tags: tags,
     description: ingress || longExcerpt,
-    authorName: author,
+    authorName: fields.author.name,
   }
 
   return (
@@ -103,6 +105,14 @@ export const pageQuery = graphql`
       html
       fields {
         slug
+        author {
+          avatar
+          email
+          name
+          nickname
+          role
+          twitter_handle
+        }
       }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")

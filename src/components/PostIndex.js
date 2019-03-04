@@ -119,6 +119,14 @@ export const postIndexQuery = graphql`
       id
       fields {
         slug
+        author {
+          avatar
+          email
+          name
+          nickname
+          role
+          twitter_handle
+        }
       }
       frontmatter {
         title

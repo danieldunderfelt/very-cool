@@ -14,7 +14,7 @@ collections:
   - name:             'author'
     label:            'Author'
     description:      'Authors writing for this site.'
-    folder:           'src/content/authors'
+    folder:           'authors'
     create:           true
     slug:             'author/{{nickname}}'
     identifier_field: 'email'

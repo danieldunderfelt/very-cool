@@ -11,8 +11,8 @@ import classnames from 'classnames'
 class Post extends Component {
   render() {
     const { post, highlight = false } = this.props
-    const { frontmatter, fields, excerpt } = post
-    const { tags = [], title, date, author, media_image, ingress } = frontmatter
+    const { frontmatter, fields: {slug, author}, excerpt } = post
+    const { tags = [], title, date, media_image, ingress } = frontmatter
 
     const articleIngress = ingress || excerpt
 
@@ -23,10 +23,10 @@ class Post extends Component {
           highlight ? articleStyles.HighlightedPost : ''
         )}>
         <PostTags tags={tags} />
-        <Link className={articleStyles.PostLink} to={fields.slug}>
+        <Link className={articleStyles.PostLink} to={slug}>
           <h2 className={articleStyles.ArticleHeading}>{title}</h2>
           <div className={articleStyles.PostMeta}>
-            <Author name={author} />
+            <Author author={author} />
             <TimeDisplay date={date} />
           </div>
           <HTMLContent content={articleIngress} />

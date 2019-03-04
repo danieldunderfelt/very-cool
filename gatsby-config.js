@@ -56,6 +56,18 @@ module.exports = {
         name: 'images',
       },
     },
+    {
+      resolve: 'gatsby-transformer-json',
+      options: {
+        typeName: ({ node }) => {
+          if (node.relativePath.match(/^author/g)) {
+            return 'Author'
+          }
+
+          return 'Json'
+        },
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -117,4 +129,7 @@ module.exports = {
     // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
+  mapping: {
+    'MarkdownRemark.fields.author': 'Author',
+  },
 }

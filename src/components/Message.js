@@ -18,8 +18,12 @@ const Message = ({
 }) => {
   const PostContent = contentComponent || HTMLContent
 
-  const { frontmatter, fields, html } = post
-  const { tags = [], date, author, media_image } = frontmatter
+  const {
+    frontmatter,
+    fields: { slug, author },
+    html,
+  } = post
+  const { tags = [], date, media_image } = frontmatter
 
   const LinkComponent = !isPreview && isLink ? Link : 'div'
 
@@ -32,7 +36,7 @@ const Message = ({
         highlight ? articleStyles.HighlightedMessage : ''
       )}>
       {highlight && <PostTags tags={tags} />}
-      <Author name={author} />
+      <Author author={author} />
       <PostContent content={html} />
       {media_image && <PostMediaImage mediaImage={media_image} />}
       <div
@@ -41,7 +45,7 @@ const Message = ({
           articleStyles.MessageMeta
         )}>
         {!highlight && <PostTags tags={tags} renderLink={!isPreview} />}
-        <LinkComponent to={fields.slug}>
+        <LinkComponent to={slug}>
           <TimeDisplay date={date} />
         </LinkComponent>
       </div>

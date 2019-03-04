@@ -86,6 +86,14 @@ export const pageQuery = graphql`
       html
       fields {
         slug
+        author {
+          avatar
+          email
+          name
+          nickname
+          role
+          twitter_handle
+        }
       }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
