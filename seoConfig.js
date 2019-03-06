@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/',
   siteTitle: `Very Cool`,
   siteTitleAlt: `Very Cool Tech`,
-  siteLogo: '/img/verycool_logo.png',
+  siteLogo: '/img/verycooltech_logo.png',
   siteUrl: 'https://verycool.tech',
   siteUrlShort: 'verycool.tech',
   siteDescription:

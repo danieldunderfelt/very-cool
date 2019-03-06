@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../img/verycool_logo.png'
+import logo from '../img/verycooltech_logo.png'
 import styles from '../style/Header.module.scss'
 import LinkList from './LinkList'
 
