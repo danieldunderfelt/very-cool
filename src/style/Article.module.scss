@@ -26,7 +26,7 @@
   background: white;
   margin-top: $margin;
   border: 1px solid $veryLightGrey;
-  padding: ($margin - 0.25rem) $margin 0.25rem;
+  padding: ($margin - 0.25rem) $margin 0;
   overflow: hidden;
   border-radius: 30px;
   transition: transform 0.2s ease-out, box-shadow 0.125s ease-out;
@@ -156,11 +156,16 @@
 .PostTags {
   font-family: 'IBM Plex Mono', monospace;
   color: $blue;
-  font-size: rem(16px);
+  font-size: 0.75rem;
   font-weight: 300;
+
+  @include multiColumn {
+    font-size: 0.875rem;
+  }
 
   ul {
     display: flex;
+    flex-wrap: nowrap;
     margin: 0 0 ($margin / 2);
     padding: 0;
   }
@@ -168,6 +173,7 @@
   li {
     list-style: none;
     margin: 0;
+    white-space: nowrap;
     text-transform: uppercase;
 
     &:first-child {
@@ -198,6 +204,7 @@
   color: $grey;
   display: flex;
   align-items: center;
+  white-space: nowrap;
   justify-content: flex-start;
   font-size: rem(14px);
   font-family: 'IBM Plex Mono', monospace;
@@ -205,6 +212,7 @@
 
   @include multiColumn {
     font-size: rem(16px);
+    white-space: normal;
   }
 
   svg {
@@ -257,6 +265,7 @@
 .PostMeta {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: ($margin / 2) (-$margin) 1rem;
   padding: 0.5rem $margin;

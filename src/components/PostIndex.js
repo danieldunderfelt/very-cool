@@ -131,7 +131,7 @@ export const postIndexQuery = graphql`
       frontmatter {
         title
         template
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMM DD, YYYY")
         tags
         author
         pinned
